@@ -8,6 +8,8 @@ public class Game
     private final static int numOfPlayers = 4;  // number of players in game
     private Player [] players;  // array of players
     private RandomDiceThrow dice; // dice used for game
+    private Deck chance;    // chance cards
+    private Deck community; // community Cards
 
     public Game()
     {
@@ -15,6 +17,8 @@ public class Game
         for (int i = 0; i < numOfPlayers; i+=1)
             players[i] = new Player();
         dice = new RandomDiceThrow();
+        chance = new Deck(Cards.chanceCards.length);
+        community = new Deck(Cards.communityChest.length);
     }
 
     public void gamePlay()
@@ -74,7 +78,11 @@ public class Game
                 {
                     doublesCounter = 0;
                 }
-                players[i].move(diceRoll);
+
+
+                players[i].move(diceRoll); // moves player forward
+
+
                 int currentPosition = players[i].getPosition();     // current position of player making his move
                 Board.frequency[currentPosition] += 1; // increases frequency array by 1
 
@@ -84,29 +92,9 @@ public class Game
                     purchase(i, currentPosition);
                 }
                 else if(Board.isProperty[currentPosition] && Board.isOwned[currentPosition] && (i != Board.ownedBy[currentPosition]))
-                // case in which tile is owned
+                // case in which tile is owned -- rent!!
                 {
-                    if (currentPosition == 12 || currentPosition == 28)  // exception for a utility tile
-                    {
-                        if (Board.isOwned[12] && Board.isOwned[28] && (Board.ownedBy[12] == Board.ownedBy[28])) // case if both utilities are owned by same player
-                        {
-                            players[i].payMoney(10*diceRoll);
-                            players[Board.ownedBy[currentPosition]].earnMoney(10*diceRoll);
-                            System.out.println("Player " + i + " pays $" + 10*diceRoll + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
-                        }
-                        else    // case in which player only owns one utility
-                        {
-                            players[i].payMoney(4*diceRoll);
-                            players[Board.ownedBy[currentPosition]].earnMoney(4*diceRoll);
-                            System.out.println("Player " + i + " pays $" + 4*diceRoll + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
-                        }
-                    }
-                    else    // any other rentable property
-                    {
-                        players[i].payMoney(Board.currentRentPrice[currentPosition]);
-                        players[Board.ownedBy[currentPosition]].earnMoney(Board.currentRentPrice[currentPosition]);
-                        System.out.println("Player " + i + " pays $" + Board.currentRentPrice[currentPosition] + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
-                    }
+                    rent(i, currentPosition);
                 }
                 else if(currentPosition == 4)       // income tax
                 {
@@ -122,11 +110,11 @@ public class Game
                 }
                 else if(currentPosition == 7 || currentPosition == 22 || currentPosition == 36) // chance cards
                 {
-                    // TODO
+                    chance(i, currentPosition);     // draws a chance card
                 }
                 else if(currentPosition == 2 || currentPosition == 17 || currentPosition == 33) // community chest
                 {
-                    // TODO
+                    community(i, currentPosition);  // draws a community chest card
                 }
                 else if(currentPosition == 30) // go to Jail tile
                 {
@@ -151,7 +139,32 @@ public class Game
         System.out.println("Total number of doubles: " + dC + ". Frequency: " + (float)dC/(totalTurns));
     }
 
-    private void purchase(int i, int currentPosition)
+    private void chance(int i, int currentPosition) // draws a chance card
+    {
+        int index = chance.Draw();
+        switch (index)
+        {
+            case 0:         // advance to GO (collect $200)
+                players[i].goToStart();
+                System.out.prinln("Player " + i + " has drawn a chance Card: " + Cards.chanceCards[index]);
+            case 1:         // Advance to Illinois Ave.
+                if (players[i].getPosition() > 24) // 24 = Tile Position for Illinois Avenue
+                    players[i].earnMoney(200);  // $200 for passing GO
+                players[i].moveTo(24); // moves player to Illinois Avenue
+                if (Board.isOwned[24])
+                    rent(i, 24);
+                else
+                    purchase(i, 24);
+            case 2:
+        }
+    }
+
+    private void community(int i, int currentPosition) // draws a community chest card
+    {
+
+    }
+
+    private void purchase(int i, int currentPosition)   // purchases a unpurchased tile
     {
         players[i].purchaseProperty(currentPosition);
         Board.ownedBy[currentPosition] = i;
@@ -303,6 +316,31 @@ public class Game
         {
             players[i].increaseRR();
             players[i].rrRentIncrease();
+        }
+    }
+
+    public void rent(int i, int currentPositon)
+    {
+        if (currentPosition == 12 || currentPosition == 28)  // exception for a utility tile
+        {
+            if (Board.isOwned[12] && Board.isOwned[28] && (Board.ownedBy[12] == Board.ownedBy[28])) // case if both utilities are owned by same player
+            {
+                players[i].payMoney(10*diceRoll);
+                players[Board.ownedBy[currentPosition]].earnMoney(10*diceRoll);
+                System.out.println("Player " + i + " pays $" + 10*diceRoll + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
+            }
+            else    // case in which player only owns one utility
+            {
+                players[i].payMoney(4*diceRoll);
+                players[Board.ownedBy[currentPosition]].earnMoney(4*diceRoll);
+                System.out.println("Player " + i + " pays $" + 4*diceRoll + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
+            }
+        }
+        else    // any other rentable property
+        {
+            players[i].payMoney(Board.currentRentPrice[currentPosition]);
+            players[Board.ownedBy[currentPosition]].earnMoney(Board.currentRentPrice[currentPosition]);
+            System.out.println("Player " + i + " pays $" + Board.currentRentPrice[currentPosition] + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
         }
     }
 }
