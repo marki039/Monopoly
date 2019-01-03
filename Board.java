@@ -229,7 +229,10 @@ public class Board
     };
 
     // array that holds the true/false value of if the property is currently owned or not. Intially, all properties are not owned
-    public static boolean isOwned[40];
+    public static boolean [] isOwned = new boolean[40];
+
+    // array that holds the frequency that each tile was visited
+    public static int [] frequency = new int[40];
 
     /*
     TODO:
