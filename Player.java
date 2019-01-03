@@ -27,6 +27,7 @@ public class Player
     private int numRR; // refers to the number of railroads this player owns
     private boolean inJail; // true if player is in jail
     private int jailCounter; // counts how many turns the player has been in jail (maximum of 3 turns in jail)
+    private int getOutJailFree; // counts number of Get out of Jail Free Cards this player holds.
 
     Player()
     {
@@ -37,6 +38,7 @@ public class Player
         numRR = 0;
         inJail = false;
         jailCounter = 0;
+        getOutJailFree = 0;
     }
 
     // function used to purchase property for player
@@ -124,7 +126,11 @@ public class Player
             position = position % 40; // keeps players position under 40
             money += 200;       // collect $200 as you pass GO
         }
+    }
 
+    public void moveTo(int position)   // moves player to a certain position on the Board
+    {
+        this.position = position;
     }
 
     public void printProperties()       // prints Properties currently owned by player
@@ -212,5 +218,11 @@ public class Player
         {
             return false;
         }
+    }
+
+    public void goToStart()  // goes to GO tile and earns $200
+    {
+        positon = 0;
+        money += 200;
     }
 }
