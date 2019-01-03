@@ -28,6 +28,8 @@ public class RandomDiceThrow
         }
         return dice1 + dice2;
     }
+
+    public boolean isDoubles() { return doubles; } // returns true value of doubles
 }
 
 

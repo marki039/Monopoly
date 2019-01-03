@@ -16,7 +16,7 @@ public class Board
         "Chance",               // 7
         "Vermont Avenue",       // 8
         "Connecticut Avenue",   // 9
-        "Visiting Jail",        // 10   Real jail will have be an exception in player or game class, JAIL will be techically located on tile 30
+        "Visiting Jail",        // 10
         "St. Charles Place",    // 11
         "Electric Company",     // 12
         "States Avenue",        // 13
@@ -36,11 +36,11 @@ public class Board
         "Ventnor Avenue",       // 27
         "Water Works",          // 28
         "Marvin Gardens",       // 29
-        "Go To Jail",           // 30   Sucks to be BAD -- Also JAIL (techically)
+        "Go To Jail",           // 30   Sucks to be BAD
         "Pacific Avenue",       // 31
         "North Carolina Avenue",// 32
         "Community Chest",      // 33
-        "Pennsylavnia Avenue",  // 34
+        "Pennsylvania Avenue",  // 34
         "Short Line",           // 35
         "Chance",               // 36
         "Park Place",           // 37
@@ -85,7 +85,7 @@ public class Board
         300,    // "Pacific Avenue",       // 31
         300,    // "North Carolina Avenue",// 32
         null,   // "Community Chest",      // 33
-        320,    // "Pennsylavnia Avenue",  // 34
+        320,    // "Pennsylvania Avenue",  // 34
         200,    // "Short Line",           // 35
         null,   // "Chance",               // 36
         350,    // "Park Place",           // 37
@@ -130,7 +130,7 @@ public class Board
         26,     // "Pacific Avenue",       // 31
         26,     // "North Carolina Avenue",// 32
         null,   // "Community Chest",      // 33
-        28,     // "Pennsylavnia Avenue",  // 34
+        28,     // "Pennsylvania Avenue",  // 34
         null,   // "Short Line",           // 35   Special Case (Railroad): 25 if 1 owned, 50 if 2 owned, 100 if 3 owned, 200 if all 4 owned
         null,   // "Chance",               // 36
         35,     // "Park Place",           // 37
@@ -151,7 +151,7 @@ public class Board
         false,   // "Chance",               // 7
         true,    // "Vermont Avenue",       // 8
         true,    // "Connecticut Avenue",   // 9
-        false,   // "Visiting Jail",        // 10   Real jail will have be an exception in player or game class, JAIL will be techically located on tile 30
+        false,   // "Visiting Jail",        // 10
         true,    // "St. Charles Place",    // 11
         true,    // "Electric Company",     // 12
         true,    // "States Avenue",        // 13
@@ -171,11 +171,11 @@ public class Board
         true,    // "Ventnor Avenue",       // 27
         true,    // "Water Works",          // 28
         true,    // "Marvin Gardens",       // 29
-        false,   // "Go To Jail",           // 30   Sucks to be BAD -- Also JAIL (techically)
+        false,   // "Go To Jail",           // 30   Sucks to be BAD
         true,    // "Pacific Avenue",       // 31
         true,    // "North Carolina Avenue",// 32
         false,   // "Community Chest",      // 33
-        true,    // "Pennsylavnia Avenue",  // 34
+        true,    // "Pennsylvania Avenue",  // 34
         true,    // "Short Line",           // 35
         false,   // "Chance",               // 36
         true,    // "Park Place",           // 37
@@ -220,7 +220,7 @@ public class Board
         26,     // "Pacific Avenue",       // 31
         26,     // "North Carolina Avenue",// 32
         null,   // "Community Chest",      // 33
-        28,     // "Pennsylavnia Avenue",  // 34
+        28,     // "Pennsylvania Avenue",  // 34
         25,     // "Short Line",           // 35   Special Case (Railroad): 25 if 1 owned, 50 if 2 owned, 100 if 3 owned, 200 if all 4 owned
         null,   // "Chance",               // 36
         35,     // "Park Place",           // 37

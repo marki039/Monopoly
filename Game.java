@@ -20,12 +20,53 @@ public class Game
     public void gamePlay()
     {
         int j = 0;
+        int doublesCounter = 0;
         while(j < 100)
         {
             System.out.println("Turn Number: " + j);
             for(int i = 0; i < numOfPlayers; i+=1)
             {
                 int diceRoll = dice.returnSum();
+                if (players[i].isInJail()) // leaves jail if the player rolls doubles or has spent 3 days in jail. The player may take his next turn the seqeuential turn after getting out of jail.
+                {
+                    if (!dice.isDoubles()) // if the player did not roll doubles
+                    {
+                        if(players[i].incrementJail()) // will execute if player has spent 3 days in jail
+                        {
+                            players[i].payMoney(50); // player is forced to pay $50 and continue with his move
+                            players[i].getOutOfJail();
+                            System.out.println("Player " + i + " pays $50 to leave Jail.\n");
+                            continue;
+                        }
+                        else
+                        {
+                            System.out.println("Player " + i + " is in Jail. His Turn will be Skipped.\n");
+                            continue; // if the player doesn't leave jail. Then the players turn is skipped.
+                        }
+                    }
+                    else
+                    {
+                        players[i].getOutOfJail();
+                        System.out.println("Player " + i + " has rolled Doubles. He will leave jail.\n");
+                        continue;
+                    }
+                }
+                if (doublesCounter >= 2 && dice.isDoubles()) // if the player has rolled doubles 3 times in a row.
+                {
+                    System.out.println("Player " +  " has rolled doubles 3 times. This player will go directly to jail.\n");
+                    players[i].goToJail();
+                    doublesCounter = 0;
+                    continue;
+                }
+                else if (dice.isDoubles())
+                {
+                    System.out.println("Player " + i + " has rolled doubles. This player will take another turn after the current one.\n");
+                    doublesCounter += 1;
+                }
+                else
+                {
+                    doublesCounter = 0;
+                }
                 players[i].move(diceRoll);
                 int currentPosition = players[i].getPosition();     // current position of player making his move
                 Board.frequency[currentPosition] += 1; // increases frequency array by 1
@@ -80,14 +121,22 @@ public class Game
                 {
                     // TODO
                 }
+                else if(currentPosition == 30) // go to Jail tile
+                {
+                    players[i].goToJail();
+                    System.out.println("Player " + i + " lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.\n");
+                    continue;
+                }
 
                 // Testing Purposes
                 players[i].printProperties();
                 System.out.println("Player " + i + " position: " + players[i].getPosition() + ", money: " + players[i].getMoney());
                 System.out.println("Player's Location: " + Board.tileName[players[i].getPosition()] + "\n");
+
+                if (dice.isDoubles())
+                    i-=1; // makes it so that the player that just went will take another turn.
             }
             System.out.println("\n\n\n");
-
 
             j+=1;
         }

@@ -1,0 +1,2584 @@
+Turn Number: 0
+Player 0 purchases property Connecticut Avenue
+Owned Properties: Connecticut Avenue.
+Player 0 position: 9, money: 1380
+Player's Location: Connecticut Avenue
+
+Player 1 purchases property Oriental Avenue
+Owned Properties: Oriental Avenue.
+Player 1 position: 6, money: 1400
+Player's Location: Oriental Avenue
+
+No Owned Properties
+Player 2 position: 7, money: 1500
+Player's Location: Chance
+
+Player 3 purchases property Vermont Avenue
+Owned Properties: Vermont Avenue.
+Player 3 position: 8, money: 1400
+Player's Location: Vermont Avenue
+
+
+
+
+
+Turn Number: 1
+Player 0 purchases property States Avenue
+Owned Properties: States Avenue, Connecticut Avenue.
+Player 0 position: 13, money: 1240
+Player's Location: States Avenue
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 purchases property Virginia Avenue
+Owned Properties: Virginia Avenue, Oriental Avenue.
+Player 1 position: 14, money: 1240
+Player's Location: Virginia Avenue
+
+Owned Properties: Virginia Avenue, Oriental Avenue.
+Player 1 position: 17, money: 1240
+Player's Location: Community Chest
+
+Player 2 pays $10 to player 0 to stay at States Avenue
+No Owned Properties
+Player 2 position: 13, money: 1490
+Player's Location: States Avenue
+
+Player 3 pays $10 to player 0 to stay at States Avenue
+Owned Properties: Vermont Avenue.
+Player 3 position: 13, money: 1390
+Player's Location: States Avenue
+
+
+
+
+
+Turn Number: 2
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Player 0 purchases property Pennsylvania Railroad
+Owned Properties: Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 15, money: 1060
+Player's Location: Pennsylvania Railroad
+
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 17, money: 1060
+Player's Location: Community Chest
+
+Player  has rolled doubles 3 times. This player will go directly to jail.
+
+Player 1 purchases property Indiana Avenue
+Owned Properties: Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 23, money: 1020
+Player's Location: Indiana Avenue
+
+Player 2 purchases property New York Avenue
+Owned Properties: New York Avenue.
+Player 2 position: 19, money: 1290
+Player's Location: New York Avenue
+
+Owned Properties: Vermont Avenue.
+Player 3 position: 22, money: 1390
+Player's Location: Chance
+
+
+
+
+
+Turn Number: 3
+Player 0 is in Jail. His Turn will be Skipped.
+
+Player 1 purchases property Atlantic Avenue
+Owned Properties: Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 26, money: 760
+Player's Location: Atlantic Avenue
+
+Player 2 purchases property Ventnor Avenue
+Owned Properties: Ventnor Avenue, New York Avenue.
+Player 2 position: 27, money: 1030
+Player's Location: Ventnor Avenue
+
+Player 3 purchases property North Carolina Avenue
+Owned Properties: North Carolina Avenue, Vermont Avenue.
+Player 3 position: 32, money: 1090
+Player's Location: North Carolina Avenue
+
+
+
+
+
+Turn Number: 4
+Player 0 is in Jail. His Turn will be Skipped.
+
+Owned Properties: Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 33, money: 760
+Player's Location: Community Chest
+
+Player 2 pays $26 to player 3 to stay at North Carolina Avenue
+Owned Properties: Ventnor Avenue, New York Avenue.
+Player 2 position: 32, money: 1004
+Player's Location: North Carolina Avenue
+
+Player 3 purchases property Mediterranean Avenue
+Owned Properties: Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 1, money: 1256
+Player's Location: Mediterranean Avenue
+
+
+
+
+
+Turn Number: 5
+Player 0 pays $50 to leave Jail.
+
+Owned Properties: Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 0, money: 960
+Player's Location: GO
+
+Player 2 purchases property Boardwalk
+Owned Properties: Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 39, money: 604
+Player's Location: Boardwalk
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Player 3 purchases property Baltic Avenue
+
+
+ YOU DID IT 
+
+
+Owned Properties: Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 3, money: 1196
+Player's Location: Baltic Avenue
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Player 3 purchases property St. Charles Place
+Owned Properties: St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 11, money: 1056
+Player's Location: St. Charles Place
+
+Player 3 purchases property St. James Place
+Owned Properties: St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 16, money: 876
+Player's Location: St. James Place
+
+
+
+
+
+Turn Number: 6
+Player 0 purchases property Kentucky Avenue
+Owned Properties: Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 21, money: 790
+Player's Location: Kentucky Avenue
+
+Player 1 purchases property Reading Railroad
+Owned Properties: Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 5, money: 760
+Player's Location: Reading Railroad
+
+Owned Properties: Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 10, money: 804
+Player's Location: Visiting Jail
+
+Player 3 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 21, money: 858
+Player's Location: Kentucky Avenue
+
+
+
+
+
+Turn Number: 7
+Player 0 purchases property Water Works
+Owned Properties: Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 28, money: 658
+Player's Location: Water Works
+
+Player 1 pays $8 to player 0 to stay at Connecticut Avenue
+Owned Properties: Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 9, money: 752
+Player's Location: Connecticut Avenue
+
+Player 2 pays $25 to player 0 to stay at Pennsylvania Railroad
+Owned Properties: Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 15, money: 779
+Player's Location: Pennsylvania Railroad
+
+Player 3 purchases property Pacific Avenue
+Owned Properties: Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 31, money: 558
+Player's Location: Pacific Avenue
+
+
+
+
+
+Turn Number: 8
+Owned Properties: Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 36, money: 691
+Player's Location: Chance
+
+Player 1 pays $14 to player 3 to stay at St. James Place
+Owned Properties: Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 16, money: 738
+Player's Location: St. James Place
+
+Owned Properties: Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 20, money: 779
+Player's Location: Free Parking
+
+Owned Properties: Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 1, money: 772
+Player's Location: Mediterranean Avenue
+
+
+
+
+
+Turn Number: 9
+Player 0 pays $8 to player 3 to stay at Baltic Avenue
+Owned Properties: Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 3, money: 883
+Player's Location: Baltic Avenue
+
+Owned Properties: Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 22, money: 738
+Player's Location: Chance
+
+Player 2 pays $26 to player 3 to stay at Pacific Avenue
+Owned Properties: Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 31, money: 753
+Player's Location: Pacific Avenue
+
+Owned Properties: Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 11, money: 806
+Player's Location: St. Charles Place
+
+
+
+
+
+Turn Number: 10
+Player 0 pays $10 to player 3 to stay at St. Charles Place
+Owned Properties: Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 11, money: 873
+Player's Location: St. Charles Place
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 purchases property Illinois Avenue
+Owned Properties: Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 24, money: 498
+Player's Location: Illinois Avenue
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Owned Properties: Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 0, money: 953
+Player's Location: GO
+
+Player 3 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 21, money: 798
+Player's Location: Kentucky Avenue
+
+
+
+
+
+Turn Number: 11
+Player 0 purchases property Tennessee Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 18, money: 711
+Player's Location: Tennessee Avenue
+
+Player 1 has rolled Doubles. He will leave jail.
+
+Owned Properties: Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 4, money: 950
+Player's Location: Income Tax
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Player 3 purchases property Marvin Gardens
+Owned Properties: Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 29, money: 518
+Player's Location: Marvin Gardens
+
+Player 3 purchases property Park Place
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 37, money: 168
+Player's Location: Park Place
+
+
+
+
+
+Turn Number: 12
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 22, money: 711
+Player's Location: Chance
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 22, money: 498
+Player's Location: Chance
+
+Player 1 purchases property B. & O. Railroad
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 25, money: 298
+Player's Location: B. & O. Railroad
+
+Player 2 purchases property Electric Company
+Owned Properties: Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 12, money: 800
+Player's Location: Electric Company
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 4, money: 360
+Player's Location: Income Tax
+
+
+
+
+
+Turn Number: 13
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Player 0 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 pays $24 to player 3 to stay at Marvin Gardens
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 29, money: 274
+Player's Location: Marvin Gardens
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 38, money: 199
+Player's Location: Luxury Tax
+
+Player 2 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 21, money: 782
+Player's Location: Kentucky Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 11, money: 384
+Player's Location: St. Charles Place
+
+
+
+
+
+Turn Number: 14
+Player 0 is in Jail. His Turn will be Skipped.
+
+Player 1 pays $4 to player 3 to stay at Mediterranean Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 1, money: 395
+Player's Location: Mediterranean Avenue
+
+Player 2 pays $28 to player 0 to stay at Water Works
+Owned Properties: Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 28, money: 754
+Player's Location: Water Works
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Player 3 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 21, money: 370
+Player's Location: Kentucky Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 29, money: 370
+Player's Location: Marvin Gardens
+
+
+
+
+
+Turn Number: 15
+Player 0 is in Jail. His Turn will be Skipped.
+
+Player 1 pays $10 to player 3 to stay at St. Charles Place
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 11, money: 385
+Player's Location: St. Charles Place
+
+Player 2 purchases property Short Line
+Owned Properties: Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 35, money: 554
+Player's Location: Short Line
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 33, money: 380
+Player's Location: Community Chest
+
+
+
+
+
+Turn Number: 16
+Player 0 pays $50 to leave Jail.
+
+Player 1 pays $25 to player 0 to stay at Pennsylvania Railroad
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 15, money: 360
+Player's Location: Pennsylvania Railroad
+
+Player 2 pays $6 to player 1 to stay at Oriental Avenue
+Owned Properties: Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 6, money: 748
+Player's Location: Oriental Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 37, money: 380
+Player's Location: Park Place
+
+
+
+
+
+Turn Number: 17
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 18, money: 750
+Player's Location: Tennessee Avenue
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 21, money: 750
+Player's Location: Kentucky Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 22, money: 366
+Player's Location: Chance
+
+Player 2 pays $10 to player 0 to stay at States Avenue
+Owned Properties: Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 13, money: 738
+Player's Location: States Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 4, money: 580
+Player's Location: Income Tax
+
+
+
+
+
+Turn Number: 18
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 28, money: 760
+Player's Location: Water Works
+
+Player 1 pays $22 to player 2 to stay at Ventnor Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 27, money: 344
+Player's Location: Ventnor Avenue
+
+Player 2 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 21, money: 742
+Player's Location: Kentucky Avenue
+
+Player 3 pays $8 to player 0 to stay at Connecticut Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 9, money: 572
+Player's Location: Connecticut Avenue
+
+
+
+
+
+Turn Number: 19
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 33, money: 786
+Player's Location: Community Chest
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 33, money: 344
+Player's Location: Community Chest
+
+Player 2 pays $28 to player 0 to stay at Water Works
+Owned Properties: Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 28, money: 714
+Player's Location: Water Works
+
+Player 3 pays $12 to player 1 to stay at Virginia Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 14, money: 560
+Player's Location: Virginia Avenue
+
+
+
+
+
+Turn Number: 20
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 0, money: 1014
+Player's Location: GO
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 4, money: 550
+Player's Location: Income Tax
+
+Player 2 purchases property Pennsylvania Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 34, money: 394
+Player's Location: Pennsylvania Avenue
+
+Player 3 pays $16 to player 2 to stay at New York Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 19, money: 544
+Player's Location: New York Avenue
+
+
+
+
+
+Turn Number: 21
+Player 0 pays $6 to player 1 to stay at Oriental Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 6, money: 1008
+Player's Location: Oriental Avenue
+
+Player 1 pays $32 to player 2 to stay at Electric Company
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 12, money: 524
+Player's Location: Electric Company
+
+Player 2 pays $25 to player 1 to stay at Reading Railroad
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 5, money: 617
+Player's Location: Reading Railroad
+
+Player 3 pays $22 to player 2 to stay at Ventnor Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 27, money: 522
+Player's Location: Ventnor Avenue
+
+
+
+
+
+Turn Number: 22
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 17, money: 1008
+Player's Location: Community Chest
+
+Player 1 pays $16 to player 2 to stay at New York Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 19, money: 533
+Player's Location: New York Avenue
+
+Player 2 pays $10 to player 3 to stay at St. Charles Place
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 11, money: 645
+Player's Location: St. Charles Place
+
+Player 3 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+
+
+
+
+Turn Number: 23
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 22, money: 1008
+Player's Location: Chance
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 23, money: 533
+Player's Location: Indiana Avenue
+
+Player 2 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 21, money: 627
+Player's Location: Kentucky Avenue
+
+Player 3 is in Jail. His Turn will be Skipped.
+
+
+
+
+
+Turn Number: 24
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 33, money: 1026
+Player's Location: Community Chest
+
+Player 1 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Player 2 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 33, money: 627
+Player's Location: Community Chest
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 38, money: 552
+Player's Location: Luxury Tax
+
+Player 3 is in Jail. His Turn will be Skipped.
+
+
+
+
+
+Turn Number: 25
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Player 0 pays $25 to player 2 to stay at Short Line
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 35, money: 1001
+Player's Location: Short Line
+
+Player 0 pays $25 to player 1 to stay at Reading Railroad
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 5, money: 1176
+Player's Location: Reading Railroad
+
+Player 1 has rolled Doubles. He will leave jail.
+
+Player 2 pays $25 to player 1 to stay at Reading Railroad
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 5, money: 752
+Player's Location: Reading Railroad
+
+Player 3 pays $50 to leave Jail.
+
+
+
+
+
+Turn Number: 26
+Player 0 pays $6 to player 3 to stay at Vermont Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 8, money: 1170
+Player's Location: Vermont Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 17, money: 583
+Player's Location: Community Chest
+
+Player 2 pays $8 to player 0 to stay at Connecticut Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 9, money: 744
+Player's Location: Connecticut Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 16, money: 488
+Player's Location: St. James Place
+
+
+
+
+
+Turn Number: 27
+Player 0 pays $16 to player 2 to stay at New York Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 19, money: 1162
+Player's Location: New York Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 24, money: 583
+Player's Location: Illinois Avenue
+
+Player 2 pays $25 to player 0 to stay at Pennsylvania Railroad
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 15, money: 735
+Player's Location: Pennsylvania Railroad
+
+Player 3 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 21, money: 470
+Player's Location: Kentucky Avenue
+
+
+
+
+
+Turn Number: 28
+Player 0 pays $24 to player 3 to stay at Marvin Gardens
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 29, money: 1181
+Player's Location: Marvin Gardens
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 20, money: 735
+Player's Location: Free Parking
+
+Player 3 pays $28 to player 0 to stay at Water Works
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 28, money: 466
+Player's Location: Water Works
+
+
+
+
+
+Turn Number: 29
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 33, money: 1209
+Player's Location: Community Chest
+
+Player 1 is in Jail. His Turn will be Skipped.
+
+Player 2 has rolled doubles. This player will take another turn after the current one.
+
+Player 2 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Player 3 pays $25 to player 2 to stay at Short Line
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 35, money: 441
+Player's Location: Short Line
+
+
+
+
+
+Turn Number: 30
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 38, money: 1134
+Player's Location: Luxury Tax
+
+Player 1 is in Jail. His Turn will be Skipped.
+
+Player 2 has rolled Doubles. He will leave jail.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 2, money: 641
+Player's Location: Community Chest
+
+
+
+
+
+Turn Number: 31
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Player 0 pays $6 to player 1 to stay at Oriental Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 6, money: 1328
+Player's Location: Oriental Avenue
+
+Player 0 pays $10 to player 3 to stay at St. Charles Place
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 11, money: 1318
+Player's Location: St. Charles Place
+
+Player 1 pays $50 to leave Jail.
+
+Player 2 pays $14 to player 3 to stay at St. James Place
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 16, money: 746
+Player's Location: St. James Place
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 11, money: 665
+Player's Location: St. Charles Place
+
+
+
+
+
+Turn Number: 32
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 20, money: 1318
+Player's Location: Free Parking
+
+Player 1 pays $16 to player 2 to stay at New York Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 19, money: 523
+Player's Location: New York Avenue
+
+Player 2 pays $20 to player 1 to stay at Illinois Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 24, money: 742
+Player's Location: Illinois Avenue
+
+Player 3 pays $16 to player 2 to stay at New York Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 19, money: 649
+Player's Location: New York Avenue
+
+
+
+
+
+Turn Number: 33
+Player 0 pays $50 to player 1 to stay at B. & O. Railroad
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 25, money: 1268
+Player's Location: B. & O. Railroad
+
+Player 1 pays $36 to player 0 to stay at Water Works
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 28, money: 557
+Player's Location: Water Works
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 35, money: 758
+Player's Location: Short Line
+
+Player 3 pays $50 to player 1 to stay at B. & O. Railroad
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 25, money: 599
+Player's Location: B. & O. Railroad
+
+
+
+
+
+Turn Number: 34
+Player 0 pays $26 to player 3 to stay at North Carolina Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 32, money: 1278
+Player's Location: North Carolina Avenue
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 0, money: 807
+Player's Location: GO
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 7, money: 807
+Player's Location: Chance
+
+Player 2 pays $8 to player 3 to stay at Baltic Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 3, money: 950
+Player's Location: Baltic Avenue
+
+Player 3 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+
+
+
+
+Turn Number: 35
+Player 0 pays $50 to player 2 to stay at Boardwalk
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 39, money: 1228
+Player's Location: Boardwalk
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 pays $16 to player 2 to stay at New York Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 19, money: 791
+Player's Location: New York Avenue
+
+Player 1 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Player 2 pays $10 to player 3 to stay at St. Charles Place
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 11, money: 1006
+Player's Location: St. Charles Place
+
+Player 3 is in Jail. His Turn will be Skipped.
+
+
+
+
+
+Turn Number: 36
+Player 0 pays $25 to player 1 to stay at Reading Railroad
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 5, money: 1403
+Player's Location: Reading Railroad
+
+Player 1 is in Jail. His Turn will be Skipped.
+
+Player 2 pays $14 to player 3 to stay at St. James Place
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 16, money: 992
+Player's Location: St. James Place
+
+Player 3 has rolled Doubles. He will leave jail.
+
+
+
+
+
+Turn Number: 37
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 13, money: 1403
+Player's Location: States Avenue
+
+Player 1 is in Jail. His Turn will be Skipped.
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 22, money: 992
+Player's Location: Chance
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 16, money: 657
+Player's Location: St. James Place
+
+
+
+
+
+Turn Number: 38
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Player 0 pays $16 to player 2 to stay at New York Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 19, money: 1387
+Player's Location: New York Avenue
+
+Player 0 pays $22 to player 2 to stay at Ventnor Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 27, money: 1365
+Player's Location: Ventnor Avenue
+
+Player 1 pays $50 to leave Jail.
+
+Player 2 pays $24 to player 3 to stay at Marvin Gardens
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 29, money: 1006
+Player's Location: Marvin Gardens
+
+Player 3 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 21, money: 663
+Player's Location: Kentucky Avenue
+
+
+
+
+
+Turn Number: 39
+Player 0 pays $35 to player 3 to stay at Park Place
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 37, money: 1348
+Player's Location: Park Place
+
+Player 1 pays $10 to player 0 to stay at States Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 13, money: 756
+Player's Location: States Avenue
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 34, money: 1006
+Player's Location: Pennsylvania Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 29, money: 698
+Player's Location: Marvin Gardens
+
+
+
+
+
+Turn Number: 40
+Player 0 pays $4 to player 3 to stay at Mediterranean Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 1, money: 1554
+Player's Location: Mediterranean Avenue
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 pays $25 to player 0 to stay at Pennsylvania Railroad
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 15, money: 731
+Player's Location: Pennsylvania Railroad
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 23, money: 731
+Player's Location: Indiana Avenue
+
+Player 2 pays $8 to player 3 to stay at Baltic Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 3, money: 1198
+Player's Location: Baltic Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 32, money: 710
+Player's Location: North Carolina Avenue
+
+
+
+
+
+Turn Number: 41
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 4, money: 1570
+Player's Location: Income Tax
+
+Player 1 pays $26 to player 3 to stay at North Carolina Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 32, money: 705
+Player's Location: North Carolina Avenue
+
+Player 2 has rolled doubles. This player will take another turn after the current one.
+
+Player 2 pays $8 to player 0 to stay at Connecticut Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 9, money: 1190
+Player's Location: Connecticut Avenue
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 17, money: 1190
+Player's Location: Community Chest
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 1, money: 936
+Player's Location: Mediterranean Avenue
+
+
+
+
+
+Turn Number: 42
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Player 0 pays $6 to player 3 to stay at Vermont Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 8, money: 1572
+Player's Location: Vermont Avenue
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 15, money: 1572
+Player's Location: Pennsylvania Railroad
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 38, money: 630
+Player's Location: Luxury Tax
+
+Player 2 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 21, money: 1172
+Player's Location: Kentucky Avenue
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 3, money: 942
+Player's Location: Baltic Avenue
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Player 3 pays $8 to player 0 to stay at Connecticut Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 9, money: 934
+Player's Location: Connecticut Avenue
+
+Player 3 pays $14 to player 0 to stay at Tennessee Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 18, money: 920
+Player's Location: Tennessee Avenue
+
+
+
+
+
+Turn Number: 43
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 21, money: 1612
+Player's Location: Kentucky Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 6, money: 830
+Player's Location: Oriental Avenue
+
+Player 2 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 33, money: 1172
+Player's Location: Community Chest
+
+Player 2 has rolled doubles. This player will take another turn after the current one.
+
+Player 2 pays $4 to player 3 to stay at Mediterranean Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 1, money: 1368
+Player's Location: Mediterranean Avenue
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 7, money: 1368
+Player's Location: Chance
+
+Player 3 pays $50 to player 1 to stay at B. & O. Railroad
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 25, money: 874
+Player's Location: B. & O. Railroad
+
+
+
+
+
+Turn Number: 44
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 28, money: 1612
+Player's Location: Water Works
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 pays $6 to player 3 to stay at Vermont Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 8, money: 874
+Player's Location: Vermont Avenue
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 20, money: 874
+Player's Location: Free Parking
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 24, money: 874
+Player's Location: Illinois Avenue
+
+Player 2 pays $14 to player 3 to stay at St. James Place
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 16, money: 1354
+Player's Location: St. James Place
+
+Player 3 pays $28 to player 2 to stay at Pennsylvania Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 34, money: 866
+Player's Location: Pennsylvania Avenue
+
+
+
+
+
+Turn Number: 45
+Player 0 pays $50 to player 2 to stay at Boardwalk
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 39, money: 1562
+Player's Location: Boardwalk
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 33, money: 874
+Player's Location: Community Chest
+
+Player 2 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 21, money: 1414
+Player's Location: Kentucky Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 3, money: 1066
+Player's Location: Baltic Avenue
+
+
+
+
+
+Turn Number: 46
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 4, money: 1780
+Player's Location: Income Tax
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 pays $50 to player 2 to stay at Boardwalk
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 39, money: 824
+Player's Location: Boardwalk
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 6, money: 1024
+Player's Location: Oriental Avenue
+
+Player 2 has rolled doubles. This player will take another turn after the current one.
+
+Player 2 pays $26 to player 3 to stay at Pacific Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 31, money: 1438
+Player's Location: Pacific Avenue
+
+Player 2 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 33, money: 1438
+Player's Location: Community Chest
+
+Player  has rolled doubles 3 times. This player will go directly to jail.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 8, money: 1092
+Player's Location: Vermont Avenue
+
+
+
+
+
+Turn Number: 47
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Player 0 pays $12 to player 1 to stay at Virginia Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 14, money: 1768
+Player's Location: Virginia Avenue
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 21, money: 1768
+Player's Location: Kentucky Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 14, money: 1036
+Player's Location: Virginia Avenue
+
+Player 2 is in Jail. His Turn will be Skipped.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 16, money: 1092
+Player's Location: St. James Place
+
+
+
+
+
+Turn Number: 48
+Player 0 pays $22 to player 1 to stay at Atlantic Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 26, money: 1746
+Player's Location: Atlantic Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 23, money: 1058
+Player's Location: Indiana Avenue
+
+Player 2 is in Jail. His Turn will be Skipped.
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 22, money: 1092
+Player's Location: Chance
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 31, money: 1092
+Player's Location: Pacific Avenue
+
+
+
+
+
+Turn Number: 49
+Player 0 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Player 1 pays $22 to player 2 to stay at Ventnor Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 27, money: 1036
+Player's Location: Ventnor Avenue
+
+Player 2 pays $50 to leave Jail.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 38, money: 1017
+Player's Location: Luxury Tax
+
+
+
+
+
+Turn Number: 50
+Player 0 is in Jail. His Turn will be Skipped.
+
+Player 1 pays $25 to player 2 to stay at Short Line
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 35, money: 1011
+Player's Location: Short Line
+
+Player 2 pays $14 to player 0 to stay at Tennessee Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 18, money: 1421
+Player's Location: Tennessee Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 4, money: 1210
+Player's Location: Income Tax
+
+
+
+
+
+Turn Number: 51
+Player 0 has rolled Doubles. He will leave jail.
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 4, money: 1210
+Player's Location: Income Tax
+
+Player 2 pays $50 to player 1 to stay at B. & O. Railroad
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 25, money: 1371
+Player's Location: B. & O. Railroad
+
+Player 3 pays $10 to player 0 to stay at States Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 13, money: 1200
+Player's Location: States Avenue
+
+
+
+
+
+Turn Number: 52
+Player 0 pays $14 to player 3 to stay at St. James Place
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 16, money: 1756
+Player's Location: St. James Place
+
+Player 1 pays $32 to player 2 to stay at Electric Company
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 12, money: 1228
+Player's Location: Electric Company
+
+Player 2 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Player 3 pays $18 to player 1 to stay at Indiana Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 23, money: 1196
+Player's Location: Indiana Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 32, money: 1196
+Player's Location: North Carolina Avenue
+
+
+
+
+
+Turn Number: 53
+Player 0 pays $20 to player 1 to stay at Illinois Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 24, money: 1736
+Player's Location: Illinois Avenue
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 pays $14 to player 0 to stay at Tennessee Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 18, money: 1252
+Player's Location: Tennessee Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 26, money: 1252
+Player's Location: Atlantic Avenue
+
+Player 2 is in Jail. His Turn will be Skipped.
+
+Player 3 pays $50 to player 2 to stay at Boardwalk
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 39, money: 1146
+Player's Location: Boardwalk
+
+
+
+
+
+Turn Number: 54
+Player 0 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Player 1 pays $25 to player 2 to stay at Short Line
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 35, money: 1227
+Player's Location: Short Line
+
+Player 2 is in Jail. His Turn will be Skipped.
+
+Player 3 pays $6 to player 1 to stay at Oriental Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 6, money: 1340
+Player's Location: Oriental Avenue
+
+
+
+
+
+Turn Number: 55
+Player 0 is in Jail. His Turn will be Skipped.
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 7, money: 1433
+Player's Location: Chance
+
+Player 1 pays $14 to player 3 to stay at St. James Place
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 16, money: 1419
+Player's Location: St. James Place
+
+Player 2 pays $50 to leave Jail.
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Player 3 pays $14 to player 0 to stay at Tennessee Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 18, money: 1340
+Player's Location: Tennessee Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 29, money: 1340
+Player's Location: Marvin Gardens
+
+
+
+
+
+Turn Number: 56
+Player 0 is in Jail. His Turn will be Skipped.
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 20, money: 1419
+Player's Location: Free Parking
+
+Player 2 pays $12 to player 1 to stay at Virginia Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 14, money: 1416
+Player's Location: Virginia Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 37, money: 1340
+Player's Location: Park Place
+
+
+
+
+
+Turn Number: 57
+Player 0 pays $50 to leave Jail.
+
+Player 1 pays $32 to player 0 to stay at Water Works
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 28, money: 1399
+Player's Location: Water Works
+
+Player 2 pays $20 to player 1 to stay at Illinois Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 24, money: 1396
+Player's Location: Illinois Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 4, money: 1540
+Player's Location: Income Tax
+
+
+
+
+
+Turn Number: 58
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 17, money: 1746
+Player's Location: Community Chest
+
+Player 1 pays $35 to player 3 to stay at Park Place
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 37, money: 1384
+Player's Location: Park Place
+
+Player 2 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 11, money: 1575
+Player's Location: St. Charles Place
+
+
+
+
+
+Turn Number: 59
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 20, money: 1746
+Player's Location: Free Parking
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 5, money: 1584
+Player's Location: Reading Railroad
+
+Player 1 pays $10 to player 0 to stay at States Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 13, money: 1574
+Player's Location: States Avenue
+
+Player 2 is in Jail. His Turn will be Skipped.
+
+Player 3 pays $12 to player 1 to stay at Virginia Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 14, money: 1563
+Player's Location: Virginia Avenue
+
+
+
+
+
+Turn Number: 60
+Player 0 pays $22 to player 1 to stay at Atlantic Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 26, money: 1734
+Player's Location: Atlantic Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 24, money: 1608
+Player's Location: Illinois Avenue
+
+Player 2 is in Jail. His Turn will be Skipped.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 20, money: 1563
+Player's Location: Free Parking
+
+
+
+
+
+Turn Number: 61
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Player 0 pays $28 to player 2 to stay at Pennsylvania Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 34, money: 1706
+Player's Location: Pennsylvania Avenue
+
+Player 0 pays $8 to player 3 to stay at Baltic Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 3, money: 1898
+Player's Location: Baltic Avenue
+
+Player 1 pays $28 to player 2 to stay at Pennsylvania Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 34, money: 1580
+Player's Location: Pennsylvania Avenue
+
+Player 2 pays $50 to leave Jail.
+
+Player 3 pays $18 to player 1 to stay at Indiana Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 23, money: 1553
+Player's Location: Indiana Avenue
+
+
+
+
+
+Turn Number: 62
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 9, money: 1898
+Player's Location: Connecticut Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 38, money: 1523
+Player's Location: Luxury Tax
+
+Player 2 pays $14 to player 0 to stay at Tennessee Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 18, money: 1388
+Player's Location: Tennessee Avenue
+
+Player 3 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+
+
+
+
+Turn Number: 63
+Player 0 pays $12 to player 2 to stay at Electric Company
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 12, money: 1900
+Player's Location: Electric Company
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 2, money: 1723
+Player's Location: Community Chest
+
+Player 2 pays $22 to player 1 to stay at Atlantic Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 26, money: 1378
+Player's Location: Atlantic Avenue
+
+Player 3 has rolled Doubles. He will leave jail.
+
+
+
+
+
+Turn Number: 64
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 18, money: 1900
+Player's Location: Tennessee Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 6, money: 1745
+Player's Location: Oriental Avenue
+
+Player 2 has rolled doubles. This player will take another turn after the current one.
+
+Player 2 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 17, money: 1553
+Player's Location: Community Chest
+
+
+
+
+
+Turn Number: 65
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Player 0 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 14, money: 1745
+Player's Location: Virginia Avenue
+
+Player 1 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 21, money: 1727
+Player's Location: Kentucky Avenue
+
+Player 2 is in Jail. His Turn will be Skipped.
+
+Player 3 pays $20 to player 1 to stay at Illinois Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 24, money: 1533
+Player's Location: Illinois Avenue
+
+
+
+
+
+Turn Number: 66
+Player 0 is in Jail. His Turn will be Skipped.
+
+Player 1 pays $22 to player 2 to stay at Ventnor Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 27, money: 1725
+Player's Location: Ventnor Avenue
+
+Player 2 is in Jail. His Turn will be Skipped.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 31, money: 1533
+Player's Location: Pacific Avenue
+
+
+
+
+
+Turn Number: 67
+Player 0 has rolled Doubles. He will leave jail.
+
+Player 1 pays $28 to player 2 to stay at Pennsylvania Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 34, money: 1697
+Player's Location: Pennsylvania Avenue
+
+Player 2 pays $50 to leave Jail.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 38, money: 1458
+Player's Location: Luxury Tax
+
+
+
+
+
+Turn Number: 68
+Player 0 pays $16 to player 2 to stay at New York Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 19, money: 1902
+Player's Location: New York Avenue
+
+Player 1 pays $4 to player 3 to stay at Mediterranean Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 1, money: 1893
+Player's Location: Mediterranean Avenue
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 19, money: 1394
+Player's Location: New York Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 3, money: 1662
+Player's Location: Baltic Avenue
+
+
+
+
+
+Turn Number: 69
+Player 0 pays $50 to player 1 to stay at B. & O. Railroad
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 25, money: 1852
+Player's Location: B. & O. Railroad
+
+Player 1 pays $6 to player 3 to stay at Vermont Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 8, money: 1937
+Player's Location: Vermont Avenue
+
+Player 2 pays $18 to player 1 to stay at Indiana Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 23, money: 1376
+Player's Location: Indiana Avenue
+
+Player 3 pays $36 to player 2 to stay at Electric Company
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 12, money: 1632
+Player's Location: Electric Company
+
+
+
+
+
+Turn Number: 70
+Player 0 pays $26 to player 3 to stay at Pacific Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 31, money: 1826
+Player's Location: Pacific Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 17, money: 1955
+Player's Location: Community Chest
+
+Player 2 pays $22 to player 1 to stay at Atlantic Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 26, money: 1390
+Player's Location: Atlantic Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 22, money: 1658
+Player's Location: Chance
+
+
+
+
+
+Turn Number: 71
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 38, money: 1751
+Player's Location: Luxury Tax
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 23, money: 1977
+Player's Location: Indiana Avenue
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 33, money: 1390
+Player's Location: Community Chest
+
+Player 3 pays $22 to player 2 to stay at Ventnor Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 27, money: 1636
+Player's Location: Ventnor Avenue
+
+
+
+
+
+Turn Number: 72
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 7, money: 1951
+Player's Location: Chance
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 33, money: 1977
+Player's Location: Community Chest
+
+Player 2 pays $8 to player 3 to stay at Baltic Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 3, money: 1604
+Player's Location: Baltic Avenue
+
+Player 3 pays $28 to player 2 to stay at Pennsylvania Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 34, money: 1616
+Player's Location: Pennsylvania Avenue
+
+
+
+
+
+Turn Number: 73
+Player 0 pays $10 to player 3 to stay at St. Charles Place
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 11, money: 1941
+Player's Location: St. Charles Place
+
+Player 1 pays $8 to player 3 to stay at Baltic Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 3, money: 2169
+Player's Location: Baltic Avenue
+
+Player 2 has rolled doubles. This player will take another turn after the current one.
+
+Player 2 pays $8 to player 0 to stay at Connecticut Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 9, money: 1624
+Player's Location: Connecticut Avenue
+
+Player 2 has rolled doubles. This player will take another turn after the current one.
+
+Player 2 pays $10 to player 3 to stay at St. Charles Place
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 11, money: 1614
+Player's Location: St. Charles Place
+
+Player 2 pays $14 to player 3 to stay at St. James Place
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 16, money: 1600
+Player's Location: St. James Place
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 3, money: 1858
+Player's Location: Baltic Avenue
+
+
+
+
+
+Turn Number: 74
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 17, money: 1949
+Player's Location: Community Chest
+
+Player 1 pays $36 to player 2 to stay at Electric Company
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 12, money: 2133
+Player's Location: Electric Company
+
+Player 2 pays $20 to player 1 to stay at Illinois Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 24, money: 1616
+Player's Location: Illinois Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 11, money: 1858
+Player's Location: St. Charles Place
+
+
+
+
+
+Turn Number: 75
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 20, money: 1949
+Player's Location: Free Parking
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 17, money: 2153
+Player's Location: Community Chest
+
+Player 2 pays $26 to player 3 to stay at Pacific Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 31, money: 1590
+Player's Location: Pacific Avenue
+
+Player 3 pays $12 to player 1 to stay at Virginia Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 14, money: 1872
+Player's Location: Virginia Avenue
+
+
+
+
+
+Turn Number: 76
+Player 0 pays $50 to player 1 to stay at B. & O. Railroad
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 25, money: 1899
+Player's Location: B. & O. Railroad
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 24, money: 2215
+Player's Location: Illinois Avenue
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 0, money: 1790
+Player's Location: GO
+
+Player 3 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 21, money: 1854
+Player's Location: Kentucky Avenue
+
+
+
+
+
+Turn Number: 77
+Player 0 pays $26 to player 3 to stay at North Carolina Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 32, money: 1891
+Player's Location: North Carolina Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 33, money: 2215
+Player's Location: Community Chest
+
+Player 2 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 10, money: 1790
+Player's Location: Visiting Jail
+
+Player 2 pays $14 to player 3 to stay at St. James Place
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 16, money: 1776
+Player's Location: St. James Place
+
+Player 3 pays $28 to player 0 to stay at Water Works
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 28, money: 1866
+Player's Location: Water Works
+
+
+
+
+
+Turn Number: 78
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 36, money: 1919
+Player's Location: Chance
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 4, money: 2110
+Player's Location: Income Tax
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 0, money: 2415
+Player's Location: GO
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 22, money: 1776
+Player's Location: Chance
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 36, money: 1866
+Player's Location: Chance
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 3, money: 2066
+Player's Location: Baltic Avenue
+
+
+
+
+
+Turn Number: 79
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 9, money: 2110
+Player's Location: Connecticut Avenue
+
+Player 1 pays $6 to player 3 to stay at Vermont Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 8, money: 2409
+Player's Location: Vermont Avenue
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 27, money: 1776
+Player's Location: Ventnor Avenue
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Player 3 pays $8 to player 0 to stay at Connecticut Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 9, money: 2064
+Player's Location: Connecticut Avenue
+
+Player 3 pays $16 to player 2 to stay at New York Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 19, money: 2048
+Player's Location: New York Avenue
+
+
+
+
+
+Turn Number: 80
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 17, money: 2118
+Player's Location: Community Chest
+
+Player 1 pays $10 to player 3 to stay at St. Charles Place
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 11, money: 2399
+Player's Location: St. Charles Place
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 36, money: 1792
+Player's Location: Chance
+
+Player 3 pays $20 to player 1 to stay at Illinois Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 24, money: 2038
+Player's Location: Illinois Avenue
+
+
+
+
+
+Turn Number: 81
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 28, money: 2118
+Player's Location: Water Works
+
+Player 1 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 21, money: 2401
+Player's Location: Kentucky Avenue
+
+Player 2 pays $8 to player 3 to stay at Baltic Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 3, money: 1984
+Player's Location: Baltic Avenue
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 36, money: 2046
+Player's Location: Chance
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 1, money: 2246
+Player's Location: Mediterranean Avenue
+
+
+
+
+
+Turn Number: 82
+Player 0 pays $50 to player 2 to stay at Boardwalk
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 39, money: 2086
+Player's Location: Boardwalk
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 33, money: 2401
+Player's Location: Community Chest
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 36, money: 2401
+Player's Location: Chance
+
+Player 2 pays $8 to player 0 to stay at Connecticut Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 9, money: 2026
+Player's Location: Connecticut Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 11, money: 2246
+Player's Location: St. Charles Place
+
+
+
+
+
+Turn Number: 83
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Player 0 pays $25 to player 1 to stay at Reading Railroad
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 5, money: 2269
+Player's Location: Reading Railroad
+
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 15, money: 2269
+Player's Location: Pennsylvania Railroad
+
+Player 0 pays $20 to player 1 to stay at Illinois Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 24, money: 2249
+Player's Location: Illinois Avenue
+
+Player 1 pays $50 to player 2 to stay at Boardwalk
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 39, money: 2396
+Player's Location: Boardwalk
+
+Player 2 pays $14 to player 3 to stay at St. James Place
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 16, money: 2062
+Player's Location: St. James Place
+
+Player 3 pays $25 to player 0 to stay at Pennsylvania Railroad
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 15, money: 2235
+Player's Location: Pennsylvania Railroad
+
+
+
+
+
+Turn Number: 84
+Player 0 pays $26 to player 3 to stay at Pacific Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 31, money: 2248
+Player's Location: Pacific Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 4, money: 2590
+Player's Location: Income Tax
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 22, money: 2062
+Player's Location: Chance
+
+Player 3 pays $18 to player 0 to stay at Kentucky Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 21, money: 2243
+Player's Location: Kentucky Avenue
+
+
+
+
+
+Turn Number: 85
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 33, money: 2266
+Player's Location: Community Chest
+
+Player 0 pays $50 to player 2 to stay at Boardwalk
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 39, money: 2216
+Player's Location: Boardwalk
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 pays $6 to player 3 to stay at Vermont Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 8, money: 2584
+Player's Location: Vermont Avenue
+
+Player 1 pays $10 to player 3 to stay at St. Charles Place
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 11, money: 2574
+Player's Location: St. Charles Place
+
+Player 2 pays $50 to player 1 to stay at B. & O. Railroad
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 25, money: 2062
+Player's Location: B. & O. Railroad
+
+Player 3 pays $50 to player 1 to stay at B. & O. Railroad
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 25, money: 2209
+Player's Location: B. & O. Railroad
+
+
+
+
+
+Turn Number: 86
+Player 0 pays $25 to player 1 to stay at Reading Railroad
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 5, money: 2391
+Player's Location: Reading Railroad
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 pays $16 to player 2 to stay at New York Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 19, money: 2683
+Player's Location: New York Avenue
+
+Player 1 pays $22 to player 2 to stay at Ventnor Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 27, money: 2661
+Player's Location: Ventnor Avenue
+
+Player 2 lands on 'Go To Jail' Tile. This Player will be sent directly to Jail.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 32, money: 2209
+Player's Location: North Carolina Avenue
+
+
+
+
+
+Turn Number: 87
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 10, money: 2391
+Player's Location: Visiting Jail
+
+Player 1 pays $26 to player 3 to stay at Pacific Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 31, money: 2635
+Player's Location: Pacific Avenue
+
+Player 2 is in Jail. His Turn will be Skipped.
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 0, money: 2435
+Player's Location: GO
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 4, money: 2430
+Player's Location: Income Tax
+
+
+
+
+
+Turn Number: 88
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 20, money: 2391
+Player's Location: Free Parking
+
+Player 1 pays $35 to player 3 to stay at Park Place
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 37, money: 2600
+Player's Location: Park Place
+
+Player 2 is in Jail. His Turn will be Skipped.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 11, money: 2465
+Player's Location: St. Charles Place
+
+
+
+
+
+Turn Number: 89
+Player 0 pays $20 to player 1 to stay at Illinois Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 24, money: 2371
+Player's Location: Illinois Avenue
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 pays $4 to player 3 to stay at Mediterranean Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 1, money: 2816
+Player's Location: Mediterranean Avenue
+
+Player 1 pays $8 to player 0 to stay at Connecticut Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 9, money: 2808
+Player's Location: Connecticut Avenue
+
+Player 2 pays $50 to leave Jail.
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 22, money: 2469
+Player's Location: Chance
+
+
+
+
+
+Turn Number: 90
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 36, money: 2379
+Player's Location: Chance
+
+Player 0 pays $4 to player 3 to stay at Mediterranean Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 1, money: 2575
+Player's Location: Mediterranean Avenue
+
+Player 1 pays $10 to player 0 to stay at States Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 13, money: 2798
+Player's Location: States Avenue
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 19, money: 2050
+Player's Location: New York Avenue
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 29, money: 2473
+Player's Location: Marvin Gardens
+
+
+
+
+
+Turn Number: 91
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 7, money: 2585
+Player's Location: Chance
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 22, money: 2798
+Player's Location: Chance
+
+Player 2 pays $36 to player 0 to stay at Water Works
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 28, money: 2014
+Player's Location: Water Works
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 38, money: 2398
+Player's Location: Luxury Tax
+
+
+
+
+
+Turn Number: 92
+Player 0 pays $14 to player 3 to stay at St. James Place
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 16, money: 2607
+Player's Location: St. James Place
+
+Player 1 pays $26 to player 3 to stay at Pacific Avenue
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 31, money: 2772
+Player's Location: Pacific Avenue
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 39, money: 2014
+Player's Location: Boardwalk
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 3, money: 2638
+Player's Location: Baltic Avenue
+
+
+
+
+
+Turn Number: 93
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 20, money: 2607
+Player's Location: Free Parking
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 pays $25 to player 2 to stay at Short Line
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 35, money: 2747
+Player's Location: Short Line
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 6, money: 2947
+Player's Location: Oriental Avenue
+
+Player 2 pays $25 to player 1 to stay at Reading Railroad
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 5, money: 2214
+Player's Location: Reading Railroad
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 10, money: 2638
+Player's Location: Visiting Jail
+
+
+
+
+
+Turn Number: 94
+Player 0 pays $18 to player 1 to stay at Indiana Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 23, money: 2589
+Player's Location: Indiana Avenue
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Player 1 pays $14 to player 3 to stay at St. James Place
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 16, money: 2976
+Player's Location: St. James Place
+
+Player 1 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 26, money: 2976
+Player's Location: Atlantic Avenue
+
+Player 1 pays $25 to player 2 to stay at Short Line
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 35, money: 2951
+Player's Location: Short Line
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 10, money: 2239
+Player's Location: Visiting Jail
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 17, money: 2652
+Player's Location: Community Chest
+
+
+
+
+
+Turn Number: 95
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Player 0 pays $25 to player 2 to stay at Short Line
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 35, money: 2564
+Player's Location: Short Line
+
+Player 0 pays $8 to player 3 to stay at Baltic Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 3, money: 2756
+Player's Location: Baltic Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 4, money: 3150
+Player's Location: Income Tax
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 17, money: 2264
+Player's Location: Community Chest
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 20, money: 2660
+Player's Location: Free Parking
+
+
+
+
+
+Turn Number: 96
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 13, money: 2756
+Player's Location: States Avenue
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 20, money: 2756
+Player's Location: Free Parking
+
+Player 1 pays $25 to player 0 to stay at Pennsylvania Railroad
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 15, money: 3125
+Player's Location: Pennsylvania Railroad
+
+Player 2 pays $18 to player 1 to stay at Indiana Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 23, money: 2246
+Player's Location: Indiana Avenue
+
+Player 3 pays $22 to player 2 to stay at Ventnor Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 27, money: 2638
+Player's Location: Ventnor Avenue
+
+
+
+
+
+Turn Number: 97
+Player 0 has rolled doubles. This player will take another turn after the current one.
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 28, money: 2781
+Player's Location: Water Works
+
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 33, money: 2781
+Player's Location: Community Chest
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 20, money: 3143
+Player's Location: Free Parking
+
+Player 2 pays $20 to player 0 to stay at Water Works
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 28, money: 2248
+Player's Location: Water Works
+
+Player 3 has rolled doubles. This player will take another turn after the current one.
+
+Player 3 pays $50 to player 2 to stay at Boardwalk
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 39, money: 2588
+Player's Location: Boardwalk
+
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 2, money: 2788
+Player's Location: Community Chest
+
+
+
+
+
+Turn Number: 98
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 36, money: 2801
+Player's Location: Chance
+
+Player 1 pays $24 to player 3 to stay at Marvin Gardens
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 29, money: 3119
+Player's Location: Marvin Gardens
+
+Player 2 pays $26 to player 3 to stay at North Carolina Avenue
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 32, money: 2272
+Player's Location: North Carolina Avenue
+
+Player 3 pays $8 to player 0 to stay at Connecticut Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 9, money: 2830
+Player's Location: Connecticut Avenue
+
+
+
+
+
+Turn Number: 99
+Player 0 pays $8 to player 3 to stay at Baltic Avenue
+Owned Properties: Tennessee Avenue, Water Works, Kentucky Avenue, Pennsylvania Railroad, States Avenue, Connecticut Avenue.
+Player 0 position: 3, money: 3001
+Player's Location: Baltic Avenue
+
+Owned Properties: B. & O. Railroad, Illinois Avenue, Reading Railroad, Atlantic Avenue, Indiana Avenue, Virginia Avenue, Oriental Avenue.
+Player 1 position: 36, money: 3119
+Player's Location: Chance
+
+Owned Properties: Pennsylvania Avenue, Short Line, Electric Company, Boardwalk, Ventnor Avenue, New York Avenue.
+Player 2 position: 0, money: 2472
+Player's Location: GO
+
+Player 3 pays $14 to player 0 to stay at Tennessee Avenue
+Owned Properties: Park Place, Marvin Gardens, Pacific Avenue, St. James Place, St. Charles Place, Baltic Avenue, Mediterranean Avenue, North Carolina Avenue, Vermont Avenue.
+Player 3 position: 18, money: 2824
+Player's Location: Tennessee Avenue
+
+
+
+
+

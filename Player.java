@@ -25,6 +25,8 @@ public class Player
     private PropertyNode properties; // refers to list of proeprties this player owns
     private int colorGroupsOwned; // refers to number of Color Groups this player has monopolized
     private int numRR; // refers to the number of railroads this player owns
+    private boolean inJail; // true if player is in jail
+    private int jailCounter; // counts how many turns the player has been in jail (maximum of 3 turns in jail)
 
     Player()
     {
@@ -33,6 +35,8 @@ public class Player
         properties = null;  // starts with no properties
         colorGroupsOwned = 0;
         numRR = 0;
+        inJail = false;
+        jailCounter = 0;
     }
 
     // function used to purchase property for player
@@ -181,6 +185,32 @@ public class Player
                     Board.currentRentPrice[temp.tileNumber] = 25 * (int)Math.pow(2, numRR - 1);     // increases rent price accordingly
                 }
             }
+        }
+    }
+
+    public void goToJail() // puts player in jail
+    {
+        position = 10; // changes position to jail cell
+        inJail = true;
+    }
+    public void getOutOfJail() // takes player out of jail
+    {
+        jailCounter = 0;
+        inJail = false;
+    }
+    public boolean isInJail() { return inJail; } // returns status of player in jail
+
+    public boolean incrementJail() // incremements the number
+    {
+        jailCounter += 1;
+        if (jailCounter >= 3)
+        {
+            jailCounter = 0;
+            return true; // returns true if the player has spent three turns in jail
+        }
+        else
+        {
+            return false;
         }
     }
 }
