@@ -146,9 +146,8 @@ public class Game
         {
             case 0:         // advance to GO (collect $200)
                 players[i].goToStart();
-                System.out.prinln("Player " + i + " has drawn a chance Card: " + Cards.chanceCards[index]);
             case 1:         // Advance to Illinois Ave.
-                if (players[i].getPosition() > 24) // 24 = Tile Position for Illinois Avenue
+                if (currentPosition > 24) // 24 = Tile Position for Illinois Avenue
                     players[i].earnMoney(200);  // $200 for passing GO
                 players[i].moveTo(24); // moves player to Illinois Avenue
                 if (Board.isOwned[24])
@@ -157,6 +156,7 @@ public class Game
                     purchase(i, 24);
             case 2:
         }
+        System.out.prinln("Player " + i + " has drawn a chance Card: " + Cards.chanceCards[index]);
     }
 
     private void community(int i, int currentPosition) // draws a community chest card
