@@ -123,7 +123,7 @@ public class Player
 
     }
 
-    public void printProperties()
+    public void printProperties()       // prints Properties currently owned by player
     {
         if (properties == null)
         {
@@ -143,5 +143,15 @@ public class Player
 
             System.out.println(sb.toString());
         }
+    }
+
+    public void payMoney(int cost)      // pays money to someone or something
+    {
+        money -= cost;
+    }
+
+    public void getMoney(int cost)      // gets money from someone or something
+    {
+        money += cost;
     }
 }

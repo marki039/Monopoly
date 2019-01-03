@@ -142,9 +142,9 @@ public class Board
     public final static boolean [] isProperty =
     {
         false,   // "GO",                   // 0
-        true,     // "Mediterranean Avenue", // 1
+        true,    // "Mediterranean Avenue", // 1
         false,   // "Community Chest",      // 2
-        true,     // "Baltic Avenue",        // 3
+        true,    // "Baltic Avenue",        // 3
         false,   // "Income Tax",           // 4
         true,    // "Reading Railroad",     // 5
         true,    // "Oriental Avenue",      // 6
@@ -179,7 +179,7 @@ public class Board
         true,    // "Short Line",           // 35
         false,   // "Chance",               // 36
         true,    // "Park Place",           // 37
-        false,     // "Luxury Tax",           // 38
+        false,   // "Luxury Tax",           // 38
         true    // "Boardwalk"              // 39
     };
 
@@ -228,8 +228,11 @@ public class Board
         50      // "Boardwalk"             // 39
     };
 
-    // array that holds the true/false value of if the property is currently owned or not. Intially, all properties are not owned
+    // array that holds the true/false value of if the property is currently owned or not. Intially, all properties are not owned (false)
     public static boolean [] isOwned = new boolean[40];
+
+    // array that holds which player owns the property (if owned)
+    public static Integer [] ownedBy = new Integer[40]; // each element initialized to null
 
     // array that holds the frequency that each tile was visited
     public static int [] frequency = new int[40];
