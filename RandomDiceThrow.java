@@ -28,20 +28,29 @@ public class RandomDiceThrow
         }
         return dice1 + dice2;
     }
+
+    public boolean isDoubles() { return doubles; } // returns true value of doubles
 }
 
 
-/*
-// Testing Class for dice class
 
-public class Main
+// Testing Class for dice class
+/*
+class Main
 {
         public static void main(String[] args)
         {
             int [] frequency = new int[13];
+            int dC = 0;
             RandomDiceThrow dice = new RandomDiceThrow();
             for(int i = 0; i < 1000000; i+=1)
+            {
                 frequency[dice.returnSum()]+=1;
+                if (dice.isDoubles())
+                    dC += 1;
+            }
+
+            System.out.println("Frequency of Doubles: " + dC/1000000.0);
 
             System.out.println("Frequency of 2: " + frequency[2]/1000000.0);
             System.out.println("Frequency of 3: " + frequency[3]/1000000.0);
