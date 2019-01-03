@@ -20,13 +20,20 @@ public class Game
     public void gamePlay()
     {
         int j = 0;
-        int doublesCounter = 0;
+        int doublesCounter = 0; // keeps track of how many times each player has rolled doubles during their turn.
+        int dC = 0; // keeps track of how many doubles were rolled during a game. This is used purely for testing purposes.
+        int totalTurns = 0; // keeps track of how many turns were taken including doubles.
         while(j < 100)
         {
             System.out.println("Turn Number: " + j);
             for(int i = 0; i < numOfPlayers; i+=1)
             {
+                totalTurns += 1;
                 int diceRoll = dice.returnSum();
+                if (dice.isDoubles())
+                {
+                    dC += 1;
+                }
                 if (players[i].isInJail()) // leaves jail if the player rolls doubles or has spent 3 days in jail. The player may take his next turn the seqeuential turn after getting out of jail.
                 {
                     if (!dice.isDoubles()) // if the player did not roll doubles
@@ -140,6 +147,8 @@ public class Game
 
             j+=1;
         }
+
+        System.out.println("Total number of doubles: " + dC + ". Frequency: " + (float)dC/(totalTurns));
     }
 
     private void purchase(int i, int currentPosition)
