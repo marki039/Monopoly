@@ -240,6 +240,5 @@ public class Board
     /*
     TODO:
         Morgage Rates for Properties
-        Grouping Properties together for Hotels and such
     */
 }

@@ -9,9 +9,7 @@ public class Player
     private class PropertyNode
     {
         private int tileNumber;     // refers to tile on board
-        private PropertyNode next;
-        // private boolean ownsAllColorGroup; // True iff player owns all properties in a respective color group of this property
-        // private int numHouses; // number of houses built on property, 5 = Hotel
+        private PropertyNode next;  // refers to next property in list
 
         PropertyNode(int tileNumber, PropertyNode next)
         {
@@ -25,14 +23,16 @@ public class Player
     private int money; // refers to how much money player currently has
     private int position; // refers to position of player on board
     private PropertyNode properties; // refers to list of proeprties this player owns
-    private int numProperties; // refers to number of properties this player owns
+    private int colorGroupsOwned; // refers to number of Color Groups this player has monopolized
+    private int numRR; // refers to the number of railroads this player owns
 
     Player()
     {
         money = 1500;  // Starting Cash = $1500
         position = 0;  // always starts at GO (tile 0)
         properties = null;  // starts with no properties
-        numProperties = 0;
+        colorGroupsOwned = 0;
+        numRR = 0;
     }
 
     // function used to purchase property for player
@@ -150,8 +150,37 @@ public class Player
         money -= cost;
     }
 
-    public void getMoney(int cost)      // gets money from someone or something
+    public void earnMoney(int cost)      // gets money from someone or something
     {
         money += cost;
+    }
+
+    public void increaseColor() { colorGroupsOwned += 1; }      // increments colorGroupsOwned
+    public int returnColor() { return colorGroupsOwned; }       // returns number of color groups player has monopolized
+
+    public void increaseRR() { numRR += 1; }        // increments number of railroads owned
+    public int returnRR() { return numRR; }         // returns number of railroads player owns
+
+    public void rrRentIncrease()    // changes rent when number of railroads owned is greater than 1
+    {
+        if (numRR > 1)
+        {
+            PropertyNode temp = properties;
+            for (int j = 0; j < numRR; j+=1)
+            {
+                while(temp != null && temp.tileNumber % 10 != 5)    // all railroad tiles have a '5' in the one's position
+                {
+                    temp = temp.next;
+                }
+                if (temp == null)
+                {
+                    throw new NullPointerException("temp became null before all railroads were found");
+                }
+                else
+                {
+                    Board.currentRentPrice[temp.tileNumber] = 25 * (int)Math.pow(2, numRR - 1);     // increases rent price accordingly
+                }
+            }
+        }
     }
 }
