@@ -227,4 +227,15 @@ public class Player
     }
 
     public void getOutOfJailFree() { getOutJailFree += 1; }       // increments the number of get out of jail free cards. There should never be more than 2 in a game at a time
+    public boolean hasJailCard() { return getOutJailFree > 0; }     // returns true if the player has an avaliable Jail Card for use
+
+    public void useJailCard()   // uses one of the jail cards to get out of jail (Free)
+    {
+        if (getOutJailFree <= 0)
+        {
+            throw new IllegalStateException("Cannot use jail card if you have no jail cards!!"); // useful error
+        }
+        getOutJailFree -= 1;
+        getOutOfJail();
+    }
 }

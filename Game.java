@@ -40,7 +40,20 @@ public class Game
                 }
                 if (players[i].isInJail()) // leaves jail if the player rolls doubles or has spent 3 days in jail. The player may take his next turn the seqeuential turn after getting out of jail.
                 {
-                    if (!dice.isDoubles()) // if the player did not roll doubles
+                    if (players[i].hasJailCard())
+                    {
+                        players[i].useJailCard();    // uses get out of jail free card
+                        System.out.println("Player " + i + " has used Get Out of Jail Free Card. The Player may continue the turn.");
+                        if (!chance.doesDeckHaveJailCard()) // if the chance deck does not have a jail card
+                        {
+                            chance.putJailCardBack();   // returns jail card back to chance deck
+                        }
+                        else
+                        {
+                            community.putJailCardBack();    // returns jail card back to community deck
+                        }
+                    }
+                    else if (!dice.isDoubles()) // if the player did not roll doubles
                     {
                         if(players[i].incrementJail()) // will execute if player has spent 3 days in jail
                         {
@@ -320,7 +333,7 @@ public class Game
                 players[i].goToStart();
                 break;
             case 1:     // Bank error in your favor – collect $75
-                players.earnMoney(75);
+                players[i].earnMoney(75);
                 break;
             case 2:     // Doctor's fees – Pay $50
                 players[i].payMoney(50);
@@ -379,6 +392,7 @@ public class Game
             default:    // shouldn't happen
                 throw new IllegalStateException("Somehow drew a community chest card with an index greater than 16");
         }
+        System.out.println("Player " + i + " has drawn a Community Chance Card: " + Cards.communityChest[index]);
     }
 
     private void purchase(int i, int currentPosition)   // purchases a unpurchased tile
