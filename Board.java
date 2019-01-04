@@ -94,48 +94,48 @@ public class Board
     };
 
     // Base rent for all properties
-    private final static Integer [] baseRent =
+    public final static Integer [][] baseRent =      // rent for {zero houses, 1, 2, 3, 4, hotel}
     {
-        null,   // "GO",                   // 0
-        2,      // "Mediterranean Avenue", // 1
-        null,   // "Community Chest",      // 2
-        4,      // "Baltic Avenue",        // 3
-        null,   // "Income Tax",           // 4    Special Case (IncomeTax): Pay 10% or $200 (whichever is lower)
-        null,   // "Reading Railroad",     // 5    Special Case (Railroad): 25 if 1 owned, 50 if 2 owned, 100 if 3 owned, 200 if all 4 owned
-        6,      // "Oriental Avenue",      // 6
-        null,   // "Chance",               // 7
-        6,      // "Vermont Avenue",       // 8
-        8,      // "Connecticut Avenue",   // 9
-        null,   // "Visiting Jail",        // 10   Real jail will have be an exception in player or game class, JAIL will be techically located on tile 30
-        10,     // "St. Charles Place",    // 11
-        null,   // "Electric Company",     // 12   Special Case (Utilities): 4xdice if 1 owned, 10xdice if both owned
-        10,     // "States Avenue",        // 13
-        12,     // "Virginia Avenue",      // 14
-        null,   // "Pennsylvania Railroad",// 15   Special Case (Railroad): 25 if 1 owned, 50 if 2 owned, 100 if 3 owned, 200 if all 4 owned
-        14,     // "St. James Place",      // 16
-        null,   // "Community Chest",      // 17
-        14,     // "Tennessee Avenue",     // 18
-        16,     // "New York Avenue",      // 19
-        null,   // "Free Parking",         // 20
-        18,     // "Kentucky Avenue",      // 21
-        null,   // "Chance",               // 22
-        18,     // "Indiana Avenue",       // 23
-        20,     // "Illinois Avenue",      // 24
-        null,   // "B. & O. Railroad",     // 25   Special Case (Railroad): 25 if 1 owned, 50 if 2 owned, 100 if 3 owned, 200 if all 4 owned
-        22,     // "Atlantic Avenue",      // 26
-        22,     // "Ventnor Avenue",       // 27
-        null,   // "Water Works",          // 28   Special Case (Utilities): 4xdice if 1 owned, 10xdice if both owned
-        24,     // "Marvin Gardens",       // 29
-        null,   // "Go To Jail",           // 30   Sucks to be BAD -- Also JAIL (techically)
-        26,     // "Pacific Avenue",       // 31
-        26,     // "North Carolina Avenue",// 32
-        null,   // "Community Chest",      // 33
-        28,     // "Pennsylvania Avenue",  // 34
-        null,   // "Short Line",           // 35   Special Case (Railroad): 25 if 1 owned, 50 if 2 owned, 100 if 3 owned, 200 if all 4 owned
-        null,   // "Chance",               // 36
-        35,     // "Park Place",           // 37
-        null,   // "Luxury Tax",           // 38
-        50      // "Boardwalk"             // 39
+        {null, null, null, null, null, null},   // "GO",                   // 0
+        {2, 10, 30, 80, 160, 250},              // "Mediterranean Avenue", // 1
+        {null, null, null, null, null, null},   // "Community Chest",      // 2
+        {4, 20, 60, 180, 320, 450},             // "Baltic Avenue",        // 3
+        {null, null, null, null, null, null},   // "Income Tax",           // 4    Special Case (IncomeTax): Pay 10% or $200 (whichever is lower)
+        {null, null, null, null, null, null},   // "Reading Railroad",     // 5    Special Case (Railroad): 25 if 1 owned, 50 if 2 owned, 100 if 3 owned, 200 if all 4 owned
+        {6, 30, 90, 270, 400, 550},             // "Oriental Avenue",      // 6
+        {null, null, null, null, null, null},   // "Chance",               // 7
+        {6, 30, 90, 270, 400, 550},             // "Vermont Avenue",       // 8
+        {8, 40, 100, 300, 450, 600},            // "Connecticut Avenue",   // 9
+        {null, null, null, null, null, null},   // "Visiting Jail",        // 10   Real jail will have be an exception in player or game class, JAIL will be techically located on tile 30
+        {10, 50, 150, 450, 625, 750},           // "St. Charles Place",    // 11
+        {null, null, null, null, null, null},   // "Electric Company",     // 12   Special Case (Utilities): 4xdice if 1 owned, 10xdice if both owned
+        {10, 50, 150, 450, 625, 750},           // "States Avenue",        // 13
+        {12, 60, 180, 500, 700, 900},           // "Virginia Avenue",      // 14
+        {null, null, null, null, null, null},   // "Pennsylvania Railroad",// 15   Special Case (Railroad): 25 if 1 owned, 50 if 2 owned, 100 if 3 owned, 200 if all 4 owned
+        {14, 70, 200, 550, 750, 950},           // "St. James Place",      // 16
+        {null, null, null, null, null, null},   // "Community Chest",      // 17
+        {14, 70, 200, 550, 750, 950},           // "Tennessee Avenue",     // 18
+        {16, 80, 220, 600, 800, 1000},          // "New York Avenue",      // 19
+        {null, null, null, null, null, null},   // "Free Parking",         // 20
+        {18, 90, 250, 700, 875, 1050},          // "Kentucky Avenue",      // 21
+        {null, null, null, null, null, null},   // "Chance",               // 22
+        {18, 90, 250, 700, 875, 1050},          // "Indiana Avenue",       // 23
+        {20, 100, 300, 750, 925, 1100},         // "Illinois Avenue",      // 24
+        {null, null, null, null, null, null},   // "B. & O. Railroad",     // 25   Special Case (Railroad): 25 if 1 owned, 50 if 2 owned, 100 if 3 owned, 200 if all 4 owned
+        {22, 110, 330, 800, 975, 1150},         // "Atlantic Avenue",      // 26
+        {22, 110, 330, 800, 975, 1150},         // "Ventnor Avenue",       // 27
+        {null, null, null, null, null, null},   // "Water Works",          // 28   Special Case (Utilities): 4xdice if 1 owned, 10xdice if both owned
+        {24, 120, 360, 850, 1025, 1200},        // "Marvin Gardens",       // 29
+        {null, null, null, null, null, null},   // "Go To Jail",           // 30   Sucks to be BAD -- Also JAIL (techically)
+        {26, 130, 390, 900, 1100, 1275},        // "Pacific Avenue",       // 31
+        {26, 130, 390, 900, 1100, 1275},        // "North Carolina Avenue",// 32
+        {null, null, null, null, null, null},   // "Community Chest",      // 33
+        {28, 150, 450, 1000, 1200, 1400},       // "Pennsylvania Avenue",  // 34
+        {null, null, null, null, null, null},   // "Short Line",           // 35   Special Case (Railroad): 25 if 1 owned, 50 if 2 owned, 100 if 3 owned, 200 if all 4 owned
+        {null, null, null, null, null, null},   // "Chance",               // 36
+        {25, 175, 500, 1100, 1300, 1500},       // "Park Place",           // 37
+        {null, null, null, null, null, null},   // "Luxury Tax",           // 38
+        {50, 200, 600, 1400, 1700, 2000}        // "Boardwalk"             // 39
     };
 
     // element is true if tile is purchasable (ie actually a property that can be owned)

@@ -76,6 +76,9 @@ class Deck
         includeJail = true;
     }
 
+    public boolean doesDeckHaveJailCard() { return includeJail; }   // returns true if the deck has the GetOutOfJail free card in its deck or discard pile
+    public void putJailCardBack() { includeJail = true; }   // returns jail card back to deck
+
     private void push(int index)    // pushes a card onto the deck. Only used by shuffle function
     {
         top = new Node(index, top);
