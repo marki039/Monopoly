@@ -18,6 +18,55 @@ public class Player
         }
     }
 
+    // ColorGroupNode is a list-class used for storing the list of properties in which the player has a monopoly
+    private class ColorGroupNode
+    {
+        private int [] group;   // referes to a particular group
+        private String name;    // name of particular group
+        private int housePrice; // refers to the price required to build a house
+        private int numOfHouses;// refers to the number of houses on this group
+        private int numOfHotels;// refers to the number of hotels on this group
+        private ColorGroupNode next;    // refers to next color group owned
+
+        ColorGroupNode(int [] group, String name, int housePrice, ColorGroupNode next)
+        {
+            this.group = group;
+            this.name = name;
+            this.housePrice = housePrice;
+            numOfHouses = 0;
+            numOfHotels = 0;
+            this.next = next;
+        }
+
+        private void increaseHouse(int i) // increases the number of houses on the color group
+        {
+            if (numOfHouses >= 4*group.length && numOfHotels < group.length)
+            {
+                int index = group[numOfHotels];     // index of property that will be improved
+                numOfHotels += 1;
+                Board.currentRentPrice[index] = Board.baseRent[index][5];       // builds a hotel at the lowest tile number of the group that doesn't currently have a hotel
+                money -= housePrice;
+
+                System.out.println("Player " + i + " has purchased a hotel on tile " + index + ": " + Board.tileName[index]);
+            }
+            else if (numOfHouses < 4*group.length)
+            {
+                int houseNumber = numOfHouses / group.length + 1;   // refers to which round of houses is being build: will either be 1, 2, 3, or 4
+                int index = group[numOfHouses % group.length];      // index of property that will be improved
+                numOfHouses += 1;
+                // System.out.println("\n\n" + group.length + "\n\n" + numOfHouses + "\n\n" + houseNumber);
+                Board.currentRentPrice[index] = Board.baseRent[index][houseNumber];       // builds a house at the lowest tile number of the group that doesn't currently have a house
+                money -= housePrice;
+
+                System.out.println("Player " + i + " has purchased house number " + houseNumber + " on tile " + index + ": " + Board.tileName[index]);
+            }
+            else
+            {
+                System.out.println("Player " + i + " has purchased all the improvements.");
+            }
+        }
+    }
+
 
     // Player Member Variables
     private int money; // refers to how much money player currently has
@@ -28,6 +77,7 @@ public class Player
     private boolean inJail; // true if player is in jail
     private int jailCounter; // counts how many turns the player has been in jail (maximum of 3 turns in jail)
     private int getOutJailFree; // counts number of Get out of Jail Free Cards this player holds.
+    private ColorGroupNode colorGroup;      // refers to a list of the color groups this player owns
 
     Player()
     {
@@ -36,9 +86,10 @@ public class Player
         properties = null;  // starts with no properties
         colorGroupsOwned = 0;
         numRR = 0;
-        inJail = false;
+        inJail = false; // doesn't start in jail (born innocent)
         jailCounter = 0;
         getOutJailFree = 0;
+        colorGroup = null;  // starts with no color groups
     }
 
     // function used to purchase property for player
@@ -237,5 +288,31 @@ public class Player
         }
         getOutJailFree -= 1;
         getOutOfJail();
+    }
+
+    public boolean ownsGroup() { return colorGroupsOwned > 0; }     // returns true if the player has monopolized a certain color group
+
+    public void addColorGroup(int [] group, String name, int housePrice)   // adds a color group to the list of groups this player owns
+    {
+        colorGroup = new ColorGroupNode(group, name, housePrice, colorGroup);
+    }
+
+    public void addHouse(int i) // adds a house on a color group with the least number of improvements
+    {
+        ColorGroupNode temp = colorGroup;
+        ColorGroupNode least = colorGroup;
+        int count = -1;
+        // System.out.println("I am before while loop.");
+        while (temp != null)        // find the color group with the least number of improvements
+        {
+            if (temp.numOfHouses < least.numOfHouses || temp.numOfHotels < least.numOfHotels)
+            {
+                least = temp;
+            }
+            temp = temp.next;
+        }
+        // System.out.println("I am after while loop.");
+
+        least.increaseHouse(i);     // increases the improvement on this particular tile
     }
 }

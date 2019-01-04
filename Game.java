@@ -27,11 +27,22 @@ public class Game
         int doublesCounter = 0; // keeps track of how many times each player has rolled doubles during their turn.
         int dC = 0; // keeps track of how many doubles were rolled during a game. This is used purely for testing purposes.
         int totalTurns = 0; // keeps track of how many turns were taken including doubles.
-        while(j < 100)
+        while(j < 1000)
         {
             System.out.println("Turn Number: " + j);
             for(int i = 0; i < numOfPlayers; i+=1)
             {
+                if (players[i].getMoney() <= 0)
+                    System.out.println("Sucks to Suck.");
+
+                if (players[i].getMoney() >= 750 && players[i].getMoney() <= 10000 && players[i].ownsGroup())     // if the player has enough money and owns a color group        (< 10000 is there so this function wont be called after the player has enough money)
+                {
+                    // System.out.println("I am at begining of the end.");
+                    int housesToBuy = (players[i].getMoney() - 500) / 200;      // saves about $500 to be used in case of rent, allocated about $200 per house buy
+                    for (int k = 0; k < housesToBuy; k++)
+                        players[i].addHouse(i);
+                }
+
                 totalTurns += 1;
                 int diceRoll = dice.returnSum();
                 if (dice.isDoubles())
@@ -411,8 +422,9 @@ public class Game
                     Board.currentRentPrice[Improvement.P[j]] *= 2;
                     Board.currentRentPrice[Improvement.P[(j+1)%2]] *= 2;
                     players[i].increaseColor();
+                    players[i].addColorGroup(Improvement.P, Improvement.P_name, Improvement.PHouse);        // adds a color group to a players list
 
-                    System.out.println("\n\n YOU DID IT \n\n");
+                    System.out.println("Player " + i + " has obtained the Purple Color Group.");
                 }
                 return;
             }
@@ -430,7 +442,9 @@ public class Game
                     Board.currentRentPrice[Improvement.LB[(j+2)%3]] *= 2;
                     players[i].increaseColor();
 
-                    System.out.println("\n\n YOU DID IT \n\n");
+                    players[i].addColorGroup(Improvement.LB, Improvement.LB_name, Improvement.LBHouse);        // adds a color group to a players list
+
+                    System.out.println("Player " + i + " has obtained the Light Blue Color Group.");
                 }
                 return;
             }
@@ -447,8 +461,9 @@ public class Game
                     Board.currentRentPrice[Improvement.M[(j+1)%3]] *= 2;
                     Board.currentRentPrice[Improvement.M[(j+2)%3]] *= 2;
                     players[i].increaseColor();
+                    players[i].addColorGroup(Improvement.M, Improvement.M_name, Improvement.MHouse);        // adds a color group to a players list
 
-                    System.out.println("\n\n YOU DID IT \n\n");
+                    System.out.println("Player " + i + " has obtained the Maroon Color Group.");
                 }
                 return;
             }
@@ -465,8 +480,9 @@ public class Game
                     Board.currentRentPrice[Improvement.O[(j+1)%3]] *= 2;
                     Board.currentRentPrice[Improvement.O[(j+2)%3]] *= 2;
                     players[i].increaseColor();
+                    players[i].addColorGroup(Improvement.O, Improvement.O_name, Improvement.OHouse);        // adds a color group to a players list
 
-                    System.out.println("\n\n YOU DID IT \n\n");
+                    System.out.println("Player " + i + " has obtained the Orange Color Group.");
                 }
                 return;
             }
@@ -483,8 +499,9 @@ public class Game
                     Board.currentRentPrice[Improvement.R[(j+1)%3]] *= 2;
                     Board.currentRentPrice[Improvement.R[(j+2)%3]] *= 2;
                     players[i].increaseColor();
+                    players[i].addColorGroup(Improvement.R, Improvement.R_name, Improvement.RHouse);        // adds a color group to a players list
 
-                    System.out.println("\n\n YOU DID IT \n\n");
+                    System.out.println("Player " + i + " has obtained the Red Color Group.");
                 }
                 return;
             }
@@ -501,8 +518,9 @@ public class Game
                     Board.currentRentPrice[Improvement.Y[(j+1)%3]] *= 2;
                     Board.currentRentPrice[Improvement.Y[(j+2)%3]] *= 2;
                     players[i].increaseColor();
+                    players[i].addColorGroup(Improvement.Y, Improvement.Y_name, Improvement.YHouse);        // adds a color group to a players list
 
-                    System.out.println("\n\n YOU DID IT \n\n");
+                    System.out.println("Player " + i + " has obtained the Yellow Color Group.");
                 }
                 return;
             }
@@ -519,8 +537,9 @@ public class Game
                     Board.currentRentPrice[Improvement.G[(j+1)%3]] *= 2;
                     Board.currentRentPrice[Improvement.G[(j+2)%3]] *= 2;
                     players[i].increaseColor();
+                    players[i].addColorGroup(Improvement.G, Improvement.G_name, Improvement.GHouse);        // adds a color group to a players list
 
-                    System.out.println("\n\n YOU DID IT \n\n");
+                    System.out.println("Player " + i + " has obtained the Green Color Group.");
                 }
                 return;
             }
@@ -536,8 +555,9 @@ public class Game
                     Board.currentRentPrice[Improvement.DB[j]] *= 2;
                     Board.currentRentPrice[Improvement.DB[(j+1)%2]] *= 2;
                     players[i].increaseColor();
+                    players[i].addColorGroup(Improvement.DB, Improvement.DB_name, Improvement.DBHouse);        // adds a color group to a players list
 
-                    System.out.println("\n\n YOU DID IT \n\n");
+                    System.out.println("Player " + i + " has obtained the Dark Blue Color Group.");
                 }
                 return;
             }
