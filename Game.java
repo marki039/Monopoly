@@ -94,15 +94,11 @@ public class Game
                 else if(Board.isProperty[currentPosition] && Board.isOwned[currentPosition] && (i != Board.ownedBy[currentPosition]))
                 // case in which tile is owned -- rent!!
                 {
-                    rent(i, currentPosition);
+                    rent(i, currentPosition, diceRoll);
                 }
                 else if(currentPosition == 4)       // income tax
                 {
-                    int tenPercent = players[i].getMoney() % 10;
-                    if (tenPercent < 200)   // choose lowest option: 10% or $200
-                        players[i].payMoney(tenPercent);
-                    else
-                        players[i].payMoney(200);
+                    incomeTax(i);
                 }
                 else if(currentPosition == 38)  // luxury tax -- flat fee of $75
                 {
@@ -141,27 +137,248 @@ public class Game
 
     private void chance(int i, int currentPosition) // draws a chance card
     {
-        int index = chance.Draw();
+        int index = chance.Draw(); // draws new chance card
+        int evenCurrenterPosition; // used for storing new position of player
         switch (index)
         {
             case 0:         // advance to GO (collect $200)
                 players[i].goToStart();
+                break;
             case 1:         // Advance to Illinois Ave.
                 if (currentPosition > 24) // 24 = Tile Position for Illinois Avenue
                     players[i].earnMoney(200);  // $200 for passing GO
                 players[i].moveTo(24); // moves player to Illinois Avenue
                 if (Board.isOwned[24])
-                    rent(i, 24);
+                    rent(i, 24, -1);    // diceRoll = -1 since it does not matter
                 else
                     purchase(i, 24);
-            case 2:
+                break;
+            case 2:         // Advance token to nearest Utility. If unowned, you may buy it from the Bank. If owned, throw dice and pay owner a total ten times the amount thrown.
+                // utilities at postion 12 and 28
+                if (currentPosition > 28 || currentPosition <= 12) // closet utility is on tile 12
+                {
+                    if (currentPosition > 28)
+                        players[i].earnMoney(200);  // + $200 for passing GO
+                    players[i].moveTo(12);
+                }
+                else    // closest utility is on tile 28
+                {
+                    players[i].moveTo(28);
+                }
+                evenCurrenterPosition = players[i].getPosition();
+                if (Board.isOwned[evenCurrenterPosition])
+                {
+                    RandomDiceThrow dice = new RandomDiceThrow();
+                    int temp = dice.returnSum()*10;    // 10 * amount thrown on dice
+                    players[i].payMoney(temp);  // player that landed on the utility
+                    players[Board.ownedBy[evenCurrenterPosition]].earnMoney(temp);   // player that owns the utility
+                    System.out.println("Player " + i + " pays $" + temp + " to player " + Board.ownedBy[evenCurrenterPosition] + " to stay at " + Board.tileName[evenCurrenterPosition]);
+                }
+                else
+                {
+                    purchase(i, evenCurrenterPosition);  // player can purchase if unowned
+                }
+
+                break;
+            case 3:         // cards 3 and 4 are the same card
+            case 4:         // Advance token to the nearest Railroad and pay owner twice the rental to which he/she is otherwise entitled. If Railroad is unowned, you may buy it from the Bank.
+                // railroads at 5, 15, 25, 35
+                if (currentPosition > 35 || currentPosition <= 5)   // closest railroad is on tile 5
+                {
+                    if (currentPosition > 35)
+                        players[i].earnMoney(200);  // + $200 for passing GO
+                    players[i].moveTo(5);
+                }
+                else if (currentPosition > 5 && currentPosition <= 15) // closest railroad is on tile 15
+                {
+                    players[i].moveTo(15);
+                }
+                else if (currentPosition > 15 && currentPosition <= 25) // closest railroad is on tile 25
+                {
+                    players[i].moveTo(25);
+                }
+                else // closest railroad is on tile 35
+                {
+                    players[i].moveTo(35);
+                }
+                evenCurrenterPosition = players[i].getPosition();
+                if (Board.isOwned[evenCurrenterPosition])
+                {
+                    int temp = Board.currentRentPrice[evenCurrenterPosition]*2;    // 2 * the current rent
+                    players[i].payMoney(temp);  // player that landed on the railroad
+                    players[Board.ownedBy[evenCurrenterPosition]].earnMoney(temp);   // player that owns the railroad
+                }
+                else
+                {
+                    purchase(i, evenCurrenterPosition);  // player can purchase if unowned
+                }
+                break;
+            case 5:     // Advance to St. Charles Place – if you pass Go, collect $200
+                if (currentPosition > 11) // 11 = Tile Position for St. Charles Place
+                    players[i].earnMoney(200);  // $200 for passing GO
+                players[i].moveTo(11); // moves player to Illinois Avenue
+                if (Board.isOwned[11])
+                    rent(i, 11, -1);    // diceRoll = -1 since it does not matter
+                else
+                    purchase(i, 11);
+                break;
+            case 6:     // Bank pays you dividend of $50
+                players[i].earnMoney(50);   // $50
+                break;
+            case 7:     // You have won a crossword competition - collect $100
+                players[i].earnMoney(100);  // $100
+                break;
+            case 8:     // Go back 3 spaces
+                if(currentPosition == 7)    // going back 3 spaces will land on Income Tax
+                {
+                    players[i].moveTo(4);
+                    incomeTax(i);
+                }
+                else if (currentPosition == 22)     // going back 3 spaces will land on New York Avenue: tile 19
+                {
+                    players[i].moveTo(19);
+                    if (Board.isOwned[19])
+                    {
+                        rent(i, 19, -1);    // pays rent // diceRoll = -1 since it does not matter
+                    }
+                    else
+                    {
+                        purchase(i, 19);    // buys if unknown
+                    }
+                }
+                else if (currentPosition == 36)     // going back 3 spaces will land on a Community Chest
+                {
+                    community(i, currentPosition);  // community chest
+                }
+                else    // not possible if player was on a chance tile
+                {
+                    throw new IllegalStateException("Player was somehow not on Chance Tile for moving back 3 spaces; current Position of player: " + currentPosition);
+                }
+                break;
+            case 9:     // Go directly to Jail – do not pass Go, do not collect $200
+                players[i].goToJail();
+                break;
+            case 10:    // Make general repairs on all your property – for each house pay $25 – for each hotel $100
+                // Not currently supported
+                System.out.println("Cannot yet pay house and hotel fees.");
+                break;
+            case 11:    // Pay poor tax of $15
+                players[i].payMoney(15);
+                break;
+            case 12:    // Take a trip to Reading Railroad – if you pass Go collect $200
+                // reading railroad at location 5
+                players[i].moveTo(5);
+                if (currentPosition > 5)
+                {
+                    players[i].earnMoney(200);      // + $200 for passing GO
+                }
+                if (Board.isOwned[5])
+                {
+                    rent(i, 5, -1);    // diceRoll = -1 since it does not matter
+                }
+                else
+                {
+                    purchase(i, 5);
+                }
+                break;
+            case 13:    // Take a walk on the Boardwalk – advance token to Boardwalk
+                players[i].moveTo(39);
+                if (Board.isOwned[39])
+                {
+                    rent(i, 39, -1);    // // diceRoll = -1 since it does not matter
+                }
+                else
+                {
+                    purchase(i, 39);
+                }
+                break;
+            case 14:    // You have been elected chairman of the board – pay each player $50
+                for (int j = 1; j < numOfPlayers; j++)  // pays each player $50
+                {
+                    players[i].payMoney(50);
+                    players[(i+j)%4].earnMoney(50);
+                }
+                break;
+            case 15:    // Your building loan matures – collect $150
+                players[i].earnMoney(150);
+                break;
+            case 16:    // Get out of Jail free – this card may be kept until needed, or traded/sold
+                players[i].getOutOfJailFree();
+                break;
+            default:    // shouldn't happen
+                throw new IllegalStateException("Somehow drew a chance card with an index greater than 16");
         }
-        System.out.prinln("Player " + i + " has drawn a chance Card: " + Cards.chanceCards[index]);
+        System.out.println("Player " + i + " has drawn a Chance Card: " + Cards.chanceCards[index]);
     }
 
     private void community(int i, int currentPosition) // draws a community chest card
     {
-
+        int index = community.Draw(); // draws new community chest card
+        switch (index)
+        {
+            case 0:     // Advance to Go (Collect $200)
+                players[i].goToStart();
+                break;
+            case 1:     // Bank error in your favor – collect $75
+                players.earnMoney(75);
+                break;
+            case 2:     // Doctor's fees – Pay $50
+                players[i].payMoney(50);
+                break;
+            case 3:     // Holiday Fund matures - Receive $100
+                players[i].earnMoney(100);
+                break;
+            case 4:     // Go to jail – go directly to jail – Do not pass Go, do not collect $200
+                players[i].goToJail();
+                break;
+            case 5:     // It is your birthday Collect $10 from each player
+                for (int j = 1; j < numOfPlayers; j++)  // takes 10 from each player
+                {
+                    players[i].earnMoney(10);
+                    players[(i+j)%4].payMoney(10);
+                }
+                break;
+            case 6:     // Grand Opera Night – collect $50 from every player for opening night seats
+                for (int j = 1; j < numOfPlayers; j++)  // takes 50 from each player
+                {
+                    players[i].earnMoney(50);
+                    players[(i+j)%4].payMoney(50);
+                }
+                break;
+            case 7:     // Income Tax refund – collect $20
+                players[i].earnMoney(20);
+                break;
+            case 8:     // Life Insurance Matures – collect $100
+                players[i].earnMoney(100);
+                break;
+            case 9:     // Pay Hospital Fees of $100
+                players[i].payMoney(100);
+                break;
+            case 10:    // Pay School Fees of $50
+                players[i].payMoney(50);
+                break;
+            case 11:    // Receive $25 Consultancy Fee
+                players[i].earnMoney(25);
+                break;
+            case 12:    // You are assessed for street repairs – $40 per house, $115 per hotel
+                // Not currently supported
+                System.out.println("Cannot yet pay house and hotel fees.");
+                break;
+            case 13:    // You have won second prize in a beauty contest– collect $10
+                players[i].earnMoney(10);
+                break;
+            case 14:    // You inherit $100
+                players[i].earnMoney(100);
+                break;
+            case 15:    // From sale of stock you get $50
+                players[i].earnMoney(50);
+                break;
+            case 16:    // Get out of jail free – this card may be kept until needed, or sold
+                players[i].getOutOfJailFree();
+                break;
+            default:    // shouldn't happen
+                throw new IllegalStateException("Somehow drew a community chest card with an index greater than 16");
+        }
     }
 
     private void purchase(int i, int currentPosition)   // purchases a unpurchased tile
@@ -319,7 +536,7 @@ public class Game
         }
     }
 
-    public void rent(int i, int currentPositon)
+    public void rent(int i, int currentPosition, int diceRoll)
     {
         if (currentPosition == 12 || currentPosition == 28)  // exception for a utility tile
         {
@@ -342,5 +559,14 @@ public class Game
             players[Board.ownedBy[currentPosition]].earnMoney(Board.currentRentPrice[currentPosition]);
             System.out.println("Player " + i + " pays $" + Board.currentRentPrice[currentPosition] + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
         }
+    }
+
+    public void incomeTax(int i)    // pays income tax for player i
+    {
+        int tenPercent = players[i].getMoney() % 10;
+        if (tenPercent < 200)   // choose lowest option: 10% or $200
+            players[i].payMoney(tenPercent);
+        else
+            players[i].payMoney(200);
     }
 }
