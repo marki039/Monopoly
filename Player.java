@@ -222,7 +222,9 @@ public class Player
 
     public void goToStart()  // goes to GO tile and earns $200
     {
-        positon = 0;
+        position = 0;
         money += 200;
     }
+
+    public void getOutOfJailFree() { getOutJailFree += 1; }       // increments the number of get out of jail free cards. There should never be more than 2 in a game at a time
 }

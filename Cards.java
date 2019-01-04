@@ -71,9 +71,9 @@ class Deck
     public Deck(int size)
     {
         this.size = size;
+        r = new Random();
         shuffle();
         includeJail = true;
-        r = new Random();
     }
 
     private void push(int index)    // pushes a card onto the deck. Only used by shuffle function
@@ -128,5 +128,7 @@ class Deck
         {
             push(deck[i]);
         }
+
+        System.out.println("\nShuffled!\n");
     }
 }
