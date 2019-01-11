@@ -237,8 +237,6 @@ public class Board
     // array that holds the frequency that each tile was visited
     public static int [] frequency = new int[40];
 
-    /*
-    TODO:
-        Morgage Rates for Properties
-    */
+    // array that holds whether a property is mortgaged or not
+    public static boolean [] mortgaged = new boolean[40];
 }

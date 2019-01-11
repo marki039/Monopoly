@@ -10,6 +10,7 @@ public class Game
     private RandomDiceThrow dice; // dice used for game
     private Deck chance;    // chance cards
     private Deck community; // community Cards
+    private int playersDefeated;
 
     public Game()
     {
@@ -19,23 +20,32 @@ public class Game
         dice = new RandomDiceThrow();
         chance = new Deck(Cards.chanceCards.length);
         community = new Deck(Cards.communityChest.length);
+        playersDefeated = 0;
     }
 
     public void gamePlay()
     {
-        int j = 0;
+        int j = 0;  // represents turn number
         int doublesCounter = 0; // keeps track of how many times each player has rolled doubles during their turn.
         int dC = 0; // keeps track of how many doubles were rolled during a game. This is used purely for testing purposes.
         int totalTurns = 0; // keeps track of how many turns were taken including doubles.
-        while(j < 1000)
+        while((playersDefeated != numOfPlayers - 1) && j <= 1000)
         {
             System.out.println("Turn Number: " + j);
             for(int i = 0; i < numOfPlayers; i+=1)
             {
-                if (players[i].getMoney() <= 0)
-                    System.out.println("Sucks to Suck.");
+                if (players[i].isTotallyBankrupt())     // skips players turn if they are out of the game
+                {
+                    // System.out.println("Sucks to Suck.");
+                    continue;
+                }
 
-                if (players[i].getMoney() >= 750 && players[i].getMoney() <= 10000 && players[i].ownsGroup())     // if the player has enough money and owns a color group        (< 10000 is there so this function wont be called after the player has enough money)
+                if (players[i].getMoney() >= 750 && players[i].hasMortgaged())    // pays back a mortgaged property if the player has enough money
+                {
+                    players[i].deMortgage(i);
+                }
+
+                if (players[i].getMoney() >= 750 && players[i].ownsGroup())     // if the player has enough money and owns a color group
                 {
                     // System.out.println("I am at begining of the end.");
                     int housesToBuy = (players[i].getMoney() - 500) / 200;      // saves about $500 to be used in case of rent, allocated about $200 per house buy
@@ -110,16 +120,10 @@ public class Game
                 int currentPosition = players[i].getPosition();     // current position of player making his move
                 Board.frequency[currentPosition] += 1; // increases frequency array by 1
 
-                if(Board.isProperty[currentPosition] && !Board.isOwned[currentPosition] && players[i].getMoney() >= Board.purchaseCost[currentPosition])
-                // case in which tile is unowned and is able to be purchased
+                if(Board.isProperty[currentPosition] && !Board.isOwned[currentPosition])
+                // case in which tile is unowned
                 {
-                    if (players[i].getMoney() > (int)(1.5 * Board.purchaseCost[currentPosition]))    // purchases if player has at least 150% of the money required to buy the property
-                        purchase(i, currentPosition);
-                    else
-                    {
-                        System.out.println("Player " + i + " chooses to send the property " + Board.tileName[currentPosition] + " to auction.");
-                        auction(i, currentPosition, (int)(0.1 * Board.purchaseCost[currentPosition]));       // unowned tile goes to auction, starts at 10% of the cost
-                    }
+                    purchaseOrAuction(i, currentPosition);
                 }
                 else if(Board.isProperty[currentPosition] && Board.isOwned[currentPosition] && (i != Board.ownedBy[currentPosition]))
                 // case in which tile is owned -- rent!!
@@ -149,6 +153,11 @@ public class Game
                     continue;
                 }
 
+                if (players[i].getMoney() <= 0)     // if the player ends his turn with less than 0 money, then the player needs to mortgage property
+                {
+                    negative(i);
+                }
+
                 // Testing Purposes
                 players[i].printProperties();
                 System.out.println("Player " + i + " position: " + players[i].getPosition() + ", money: " + players[i].getMoney());
@@ -158,10 +167,34 @@ public class Game
                     i-=1; // makes it so that the player that just went will take another turn.
             }
             System.out.println("\n\n\n");
+            j += 1;
+        }
+        int i;
 
-            j+=1;
+        if (j >= 1000)
+        {
+            i = 0;
+            for (int k = 1; k < numOfPlayers; k += 1)
+            {
+                if (players[k].getMoney() > players[i].getMoney())
+                    i = k;
+            }
+            System.out.println("Player " + i + " has won the game with $" + players[i].getMoney() + " after 1000 turns.");
+        }
+        else
+        {
+            for (i = 0; i < numOfPlayers; i += 1)
+            {
+                if (!players[i].isTotallyBankrupt())
+                    break;
+            }
+            System.out.println("Player " + i + " has won the game with $" + players[i].getMoney());
         }
 
+        for (i = 0; i < 40; i += 1)
+        {
+            System.out.println(Board.tileName[i] + " " + Board.currentRentPrice[i]);
+        }
         System.out.println("Total number of doubles: " + dC + ". Frequency: " + (float)dC/(totalTurns));
     }
 
@@ -181,7 +214,9 @@ public class Game
                 if (Board.isOwned[24])
                     rent(i, 24, -1);    // diceRoll = -1 since it does not matter
                 else
-                    purchase(i, 24);
+                {
+                    purchaseOrAuction(i, 24);
+                }
                 break;
             case 2:         // Advance token to nearest Utility. If unowned, you may buy it from the Bank. If owned, throw dice and pay owner a total ten times the amount thrown.
                 // utilities at postion 12 and 28
@@ -206,7 +241,7 @@ public class Game
                 }
                 else
                 {
-                    purchase(i, evenCurrenterPosition);  // player can purchase if unowned
+                    purchaseOrAuction(i, evenCurrenterPosition);  // player can purchase if unowned
                 }
 
                 break;
@@ -240,7 +275,7 @@ public class Game
                 }
                 else
                 {
-                    purchase(i, evenCurrenterPosition);  // player can purchase if unowned
+                    purchaseOrAuction(i, evenCurrenterPosition);  // player can purchase if unowned
                 }
                 break;
             case 5:     // Advance to St. Charles Place – if you pass Go, collect $200
@@ -250,7 +285,7 @@ public class Game
                 if (Board.isOwned[11])
                     rent(i, 11, -1);    // diceRoll = -1 since it does not matter
                 else
-                    purchase(i, 11);
+                    purchaseOrAuction(i, 11);
                 break;
             case 6:     // Bank pays you dividend of $50
                 players[i].earnMoney(50);   // $50
@@ -273,7 +308,7 @@ public class Game
                     }
                     else
                     {
-                        purchase(i, 19);    // buys if unknown
+                        purchaseOrAuction(i, 19);    // buys if unknown
                     }
                 }
                 else if (currentPosition == 36)     // going back 3 spaces will land on a Community Chest
@@ -289,8 +324,7 @@ public class Game
                 players[i].goToJail();
                 break;
             case 10:    // Make general repairs on all your property – for each house pay $25 – for each hotel $100
-                // Not currently supported
-                System.out.println("Cannot yet pay house and hotel fees.");
+                players[i].payForHousesAndHotels(25, 100);
                 break;
             case 11:    // Pay poor tax of $15
                 players[i].payMoney(15);
@@ -308,7 +342,7 @@ public class Game
                 }
                 else
                 {
-                    purchase(i, 5);
+                    purchaseOrAuction(i, 5);
                 }
                 break;
             case 13:    // Take a walk on the Boardwalk – advance token to Boardwalk
@@ -319,14 +353,14 @@ public class Game
                 }
                 else
                 {
-                    purchase(i, 39);
+                    purchaseOrAuction(i, 39);
                 }
                 break;
             case 14:    // You have been elected chairman of the board – pay each player $50
                 for (int j = 1; j < numOfPlayers; j++)  // pays each player $50
                 {
                     players[i].payMoney(50);
-                    players[(i+j)%4].earnMoney(50);
+                    players[(i+j)%numOfPlayers].earnMoney(50);
                 }
                 break;
             case 15:    // Your building loan matures – collect $150
@@ -365,14 +399,14 @@ public class Game
                 for (int j = 1; j < numOfPlayers; j++)  // takes 10 from each player
                 {
                     players[i].earnMoney(10);
-                    players[(i+j)%4].payMoney(10);
+                    players[(i+j)%numOfPlayers].payMoney(10);
                 }
                 break;
             case 6:     // Grand Opera Night – collect $50 from every player for opening night seats
                 for (int j = 1; j < numOfPlayers; j++)  // takes 50 from each player
                 {
                     players[i].earnMoney(50);
-                    players[(i+j)%4].payMoney(50);
+                    players[(i+j)%numOfPlayers].payMoney(50);
                 }
                 break;
             case 7:     // Income Tax refund – collect $20
@@ -391,8 +425,7 @@ public class Game
                 players[i].earnMoney(25);
                 break;
             case 12:    // You are assessed for street repairs – $40 per house, $115 per hotel
-                // Not currently supported
-                System.out.println("Cannot yet pay house and hotel fees.");
+                players[i].payForHousesAndHotels(40, 115);
                 break;
             case 13:    // You have won second prize in a beauty contest– collect $10
                 players[i].earnMoney(10);
@@ -423,6 +456,11 @@ public class Game
 
     public void rent(int i, int currentPosition, int diceRoll)
     {
+        if (Board.mortgaged[currentPosition])
+        {
+            System.out.println("Player " + i + " does not have to pay rent since " + Board.tileName[currentPosition] + " is morgaged.");
+            return;
+        }
         if (currentPosition == 12 || currentPosition == 28)  // exception for a utility tile
         {
             if (Board.isOwned[12] && Board.isOwned[28] && (Board.ownedBy[12] == Board.ownedBy[28])) // case if both utilities are owned by same player
@@ -455,7 +493,7 @@ public class Game
             players[i].payMoney(200);
     }
 
-    public void auction (int i, int currentPosition, int currentAuctionPrice)     // currentAuctionPrice represents the price that the auction will start at
+    public int auction (int i, int currentPosition, int currentAuctionPrice)     // currentAuctionPrice represents the price that the auction will start at. Returns price the property was sold at
     {
         // int currentAuctionPrice = 0.1 * purchasePrice;      // auction starts at 10% of base purchase price
 
@@ -499,10 +537,12 @@ public class Game
 
         System.out.println("Player " + i + " has won the auction for $" + currentAuctionPrice + ". The player now owns " + Board.tileName[currentPosition]);
         players[i].payMoney(currentAuctionPrice);
+        players[i].earnMoney(Board.purchaseCost[currentPosition]);      // gives back money taken away in purchase property function
         players[i].purchaseProperty(currentPosition);
         Board.ownedBy[currentPosition] = i;
-        players[i].earnMoney(Board.purchaseCost[currentPosition]);      // gives back money taken away in purchase property function
         colorAdd(i, currentPosition);
+
+        return currentAuctionPrice;
     }
 
     public void colorAdd(int i, int currentPosition)        // adds ownership to property groups
@@ -662,6 +702,210 @@ public class Game
         {
             players[i].increaseRR();
             players[i].rrRentIncrease();
+        }
+    }
+
+    public void negative(int i)      // mortgages properties until the player has enough money
+    {
+        while (players[i].getMoney() < 0)       // continues until the player has the money needed to no longer be negative
+        {
+            if (players[i].hotels() > 0)    // sells hotels first
+            {
+                players[i].sellHotel(i);
+                System.out.println("Player " + i + " has sold a hotel.");
+            }
+            else if (players[i].houses() > 0)   // then sells houses
+            {
+                players[i].sellHouse(i);
+                System.out.println("Player " + i + " has sold a house.");
+            }
+            else if (players[i].mortgage(i)) {} // mortgages a property if it can
+            else if (players[i].hasProperty())  // sells a property if there are properties to sell
+            {
+                int index = players[i].propertyToSell();
+                colorDelete(i, index);
+                System.out.println("Player " + i + " has sold property: " + Board.tileName[index]);
+                Board.isOwned[index] = false;       // initially false until someone chooses to buy it again
+                players[i].sellProperty(index, auction(i, index, (int)(0.5 * Board.purchaseCost[index])));      // auctions off property starting at half the buy price
+            }
+            else        // player is completely bankrupt
+            {
+                players[i].totallyBankrupt();
+                System.out.println("Player " + i + " is totally bankrupt. This player is now eliminated from the game.");
+                playersDefeated += 1;
+                return;
+            }
+        }
+
+    }
+
+    public void colorDelete(int i, int currentPosition)        // deletes ownership to property groups
+    {
+        for (int j = 0; j < 2; j++) // deletes ownership to Purple color group
+        {
+            if(currentPosition == Improvement.P[j]) // case in which the purchased property is in the selected color group
+            {
+                Improvement.ownsP[j] = null;
+                if (Improvement.ownsP[(j+1)%2] != null && Improvement.ownsP[(j+1)%2] == i) // case in which the player owns all of the color group
+                {
+                    Board.currentRentPrice[Improvement.P[j]] /= 2;
+                    Board.currentRentPrice[Improvement.P[(j+1)%2]] /= 2;
+                    players[i].decreaseColor();
+                    players[i].deleteColorGroup(Improvement.P_name);        // adds a color group to a players list
+
+                    System.out.println("Player " + i + " has lost the Purple Color Group.");
+                }
+                return;
+            }
+        }
+
+        for (int j = 0; j < 3; j++) // deletes ownership to Light Blue color group
+        {
+            if(currentPosition == Improvement.LB[j]) // case in which the purchased property is in the selected color group
+            {
+                Improvement.ownsLB[j] = null;
+                if (Improvement.ownsLB[(j+1)%3] != null && Improvement.ownsLB[(j+2)%3] != null && Improvement.ownsLB[(j+1)%3] == i && Improvement.ownsLB[(j+2)%3] == i) // case in which the player owns all of the color group
+                {
+                    Board.currentRentPrice[Improvement.LB[j]] /= 2;
+                    Board.currentRentPrice[Improvement.LB[(j+1)%3]] /= 2;
+                    Board.currentRentPrice[Improvement.LB[(j+2)%3]] /= 2;
+                    players[i].decreaseColor();
+                    players[i].deleteColorGroup(Improvement.LB_name);        // adds a color group to a players list
+
+                    System.out.println("Player " + i + " has lost the Light Blue Color Group.");
+                }
+                return;
+            }
+        }
+
+        for (int j = 0; j < 3; j++) // deletes ownership to Maroon color group
+        {
+            if(currentPosition == Improvement.M[j]) // case in which the purchased property is in the selected color group
+            {
+                Improvement.ownsM[j] = null;
+                if (Improvement.ownsM[(j+1)%3] != null && Improvement.ownsM[(j+2)%3] != null && Improvement.ownsM[(j+1)%3] == i && Improvement.ownsM[(j+2)%3] == i) // case in which the player owns all of the color group
+                {
+                    Board.currentRentPrice[Improvement.M[j]] /= 2;
+                    Board.currentRentPrice[Improvement.M[(j+1)%3]] /= 2;
+                    Board.currentRentPrice[Improvement.M[(j+2)%3]] /= 2;
+                    players[i].decreaseColor();
+                    players[i].deleteColorGroup(Improvement.M_name);        // adds a color group to a players list
+
+                    System.out.println("Player " + i + " has lost the Maroon Color Group.");
+                }
+                return;
+            }
+        }
+
+        for (int j = 0; j < 3; j++) // deletes ownership to Orange color group
+        {
+            if(currentPosition == Improvement.O[j]) // case in which the purchased property is in the selected color group
+            {
+                Improvement.ownsO[j] = null;
+                if (Improvement.ownsO[(j+1)%3] != null && Improvement.ownsO[(j+2)%3] != null && Improvement.ownsO[(j+1)%3] == i && Improvement.ownsO[(j+2)%3] == i) // case in which the player owns all of the color group
+                {
+                    Board.currentRentPrice[Improvement.O[j]] /= 2;
+                    Board.currentRentPrice[Improvement.O[(j+1)%3]] /= 2;
+                    Board.currentRentPrice[Improvement.O[(j+2)%3]] /= 2;
+                    players[i].decreaseColor();
+                    players[i].deleteColorGroup(Improvement.O_name);        // adds a color group to a players list
+
+                    System.out.println("Player " + i + " has lost the Orange Color Group.");
+                }
+                return;
+            }
+        }
+
+        for (int j = 0; j < 3; j++) // deletes ownership to Red color group
+        {
+            if(currentPosition == Improvement.R[j]) // case in which the purchased property is in the selected color group
+            {
+                Improvement.ownsR[j] = null;
+                if (Improvement.ownsR[(j+1)%3] != null && Improvement.ownsR[(j+2)%3] != null && Improvement.ownsR[(j+1)%3] == i && Improvement.ownsR[(j+2)%3] == i) // case in which the player owns all of the color group
+                {
+                    Board.currentRentPrice[Improvement.R[j]] /= 2;
+                    Board.currentRentPrice[Improvement.R[(j+1)%3]] /= 2;
+                    Board.currentRentPrice[Improvement.R[(j+2)%3]] /= 2;
+                    players[i].decreaseColor();
+                    players[i].deleteColorGroup(Improvement.R_name);        // adds a color group to a players list
+
+                    System.out.println("Player " + i + " has lost the Red Color Group.");
+                }
+                return;
+            }
+        }
+
+        for (int j = 0; j < 3; j++) // adds ownership to Yellow color group
+        {
+            if(currentPosition == Improvement.Y[j]) // case in which the purchased property is in the selected color group
+            {
+                Improvement.ownsY[j] = null;
+                if (Improvement.ownsY[(j+1)%3] != null && Improvement.ownsY[(j+2)%3] != null && Improvement.ownsY[(j+1)%3] == i && Improvement.ownsY[(j+2)%3] == i) // case in which the player owns all of the color group
+                {
+                    Board.currentRentPrice[Improvement.Y[j]] /= 2;
+                    Board.currentRentPrice[Improvement.Y[(j+1)%3]] /= 2;
+                    Board.currentRentPrice[Improvement.Y[(j+2)%3]] /= 2;
+                    players[i].decreaseColor();
+                    players[i].deleteColorGroup(Improvement.Y_name);        // adds a color group to a players list
+
+                    System.out.println("Player " + i + " has lost the Yellow Color Group.");
+                }
+                return;
+            }
+        }
+
+        for (int j = 0; j < 3; j++) // adds ownership to Green color group
+        {
+            if(currentPosition == Improvement.G[j]) // case in which the purchased property is in the selected color group
+            {
+                Improvement.ownsG[j] = null;
+                if (Improvement.ownsG[(j+1)%3] != null && Improvement.ownsG[(j+2)%3] != null && Improvement.ownsG[(j+1)%3] == i && Improvement.ownsG[(j+2)%3] == i) // case in which the player owns all of the color group
+                {
+                    Board.currentRentPrice[Improvement.G[j]] /= 2;
+                    Board.currentRentPrice[Improvement.G[(j+1)%3]] /= 2;
+                    Board.currentRentPrice[Improvement.G[(j+2)%3]] /= 2;
+                    players[i].decreaseColor();
+                    players[i].deleteColorGroup(Improvement.G_name);        // adds a color group to a players list
+
+                    System.out.println("Player " + i + " has lost the Green Color Group.");
+                }
+                return;
+            }
+        }
+
+        for (int j = 0; j < 2; j++) // adds ownership to Dark Blue color group
+        {
+            if(currentPosition == Improvement.DB[j]) // case in which the purchased property is in the selected color group
+            {
+                Improvement.ownsDB[j] = null;
+                if (Improvement.ownsDB[(j+1)%2] != null && Improvement.ownsDB[(j+1)%2] == i) // case in which the player owns all of the color group
+                {
+                    Board.currentRentPrice[Improvement.DB[j]] /= 2;
+                    Board.currentRentPrice[Improvement.DB[(j+1)%2]] /= 2;
+                    players[i].decreaseColor();
+                    players[i].deleteColorGroup(Improvement.DB_name);        // adds a color group to a players list
+
+                    System.out.println("Player " + i + " has obtained the Dark Blue Color Group.");
+                }
+                return;
+            }
+        }
+
+        if (currentPosition % 10 == 5) // case for railroads
+        {
+            players[i].decreaseRR();
+            players[i].rrRentDecrease();
+        }
+    }
+
+    public void purchaseOrAuction(int i, int currentPosition)
+    {
+        if (players[i].getMoney() > (int)(1.5 * Board.purchaseCost[currentPosition]))    // purchases if player has at least 150% of the money required to buy the property
+            purchase(i, currentPosition);
+        else
+        {
+            System.out.println("Player " + i + " chooses to send the property " + Board.tileName[currentPosition] + " to auction.");
+            auction(i, currentPosition, (int)(0.1 * Board.purchaseCost[currentPosition]));       // unowned tile goes to auction, starts at 10% of the cost
         }
     }
 }
