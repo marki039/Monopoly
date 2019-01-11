@@ -29,7 +29,7 @@ public class Game
         int doublesCounter = 0; // keeps track of how many times each player has rolled doubles during their turn.
         int dC = 0; // keeps track of how many doubles were rolled during a game. This is used purely for testing purposes.
         int totalTurns = 0; // keeps track of how many turns were taken including doubles.
-        while((playersDefeated != numOfPlayers - 1) && j <= 1000)
+        while((playersDefeated != numOfPlayers - 1) && j <= 200)
         {
             System.out.println("Turn Number: " + j);
             for(int i = 0; i < numOfPlayers; i+=1)
@@ -42,10 +42,12 @@ public class Game
 
                 if (players[i].getMoney() >= 750 && players[i].hasMortgaged())    // pays back a mortgaged property if the player has enough money
                 {
-                    players[i].deMortgage(i);
+                    int propertiesToDeMortgage = (players[i].getMoney()-500) / 300; // saves about $500 in case of rent, allocating about $300 to pay off each mortgage rate
+                    for (int k = 0; k < propertiesToDeMortgage && players[i].hasMortgaged(); k += 1)
+                        players[i].deMortgage(i);
                 }
 
-                if (players[i].getMoney() >= 750 && players[i].ownsGroup())     // if the player has enough money and owns a color group
+                else if (players[i].getMoney() >= 750 && players[i].ownsGroup())     // if the player has enough money and owns a color group
                 {
                     // System.out.println("I am at begining of the end.");
                     int housesToBuy = (players[i].getMoney() - 500) / 200;      // saves about $500 to be used in case of rent, allocated about $200 per house buy
@@ -171,7 +173,7 @@ public class Game
         }
         int i;
 
-        if (j >= 1000)
+        if (j >= 200)
         {
             i = 0;
             for (int k = 1; k < numOfPlayers; k += 1)
@@ -179,7 +181,7 @@ public class Game
                 if (players[k].getMoney() > players[i].getMoney())
                     i = k;
             }
-            System.out.println("Player " + i + " has won the game with $" + players[i].getMoney() + " after 1000 turns.");
+            System.out.println("Player " + i + " has won the game with $" + players[i].getMoney() + " after 200 turns.");
         }
         else
         {
@@ -458,7 +460,7 @@ public class Game
     {
         if (Board.mortgaged[currentPosition])
         {
-            System.out.println("Player " + i + " does not have to pay rent since " + Board.tileName[currentPosition] + " is morgaged.");
+            System.out.println("Player " + i + " does not have to pay rent since " + Board.tileName[currentPosition] + " is mortgaged.");
             return;
         }
         if (currentPosition == 12 || currentPosition == 28)  // exception for a utility tile
@@ -727,6 +729,8 @@ public class Game
                 System.out.println("Player " + i + " has sold property: " + Board.tileName[index]);
                 Board.isOwned[index] = false;       // initially false until someone chooses to buy it again
                 players[i].sellProperty(index, auction(i, index, (int)(0.5 * Board.purchaseCost[index])));      // auctions off property starting at half the buy price
+                players[i].decreaseMortgage();
+                players[Board.ownedBy[index]].increaseMortgage();
             }
             else        // player is completely bankrupt
             {

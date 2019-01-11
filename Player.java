@@ -488,7 +488,7 @@ public class Player
     public boolean mortgage(int i)        // returns true if it successfully mortgaged a property
     {
         PropertyNode temp = properties;
-        while(temp != null && !Board.mortgaged[temp.tileNumber])     // finds a property that is not yet mortgaged
+        while(temp != null && Board.mortgaged[temp.tileNumber])     // finds a property that is not yet mortgaged
         {
             temp = temp.next;
         }
@@ -500,7 +500,7 @@ public class Player
         {
             Board.mortgaged[temp.tileNumber] = true; // mortgages property
             money += (int)(0.5 * Board.purchaseCost[temp.tileNumber]);  // gives back half the money
-            System.out.println("Player " + i + " has morgaged property: " + Board.tileName[temp.tileNumber]);
+            System.out.println("Player " + i + " has mortgaged property: " + Board.tileName[temp.tileNumber]);
             numOfMortgages += 1;
             return true;
         }
@@ -509,19 +509,19 @@ public class Player
     public void deMortgage(int i)     // demortgages a property
     {
         PropertyNode temp = properties;
-        while(temp != null && Board.mortgaged[temp.tileNumber])     // finds a property that is mortgaged
+        while(temp != null && !Board.mortgaged[temp.tileNumber])     // finds a property that is mortgaged
         {
             temp = temp.next;
         }
         if (temp == null)
         {
-            throw new IllegalStateException("Somehow go to this point.");
+            throw new IllegalStateException("Somehow go to this point: " + numOfMortgages);
         }
         else
         {
-            Board.mortgaged[temp.tileNumber] = false; // mortgages property
+            Board.mortgaged[temp.tileNumber] = false; // demortgages property
             money -= (int)(1.1 * 0.5 * Board.purchaseCost[temp.tileNumber]);  // pays 10% interest rate on mortgate
-            System.out.println("Player " + i + " has paid off morgaged property: " + Board.tileName[temp.tileNumber]);
+            System.out.println("Player " + i + " has paid off mortgaged property: " + Board.tileName[temp.tileNumber]);
             numOfMortgages -= 1;
         }
     }
@@ -555,4 +555,7 @@ public class Player
         money -= totalNumOfHouses*house;
         money -= totalNumOfHotels*hotel;
     }
+
+    public void increaseMortgage() { numOfMortgages += 1; }  // increases the number of mortgages
+    public void decreaseMortgage() { numOfMortgages -= 1; }  // decreases the number of mortgages
 }
