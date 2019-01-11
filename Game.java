@@ -113,7 +113,13 @@ public class Game
                 if(Board.isProperty[currentPosition] && !Board.isOwned[currentPosition] && players[i].getMoney() >= Board.purchaseCost[currentPosition])
                 // case in which tile is unowned and is able to be purchased
                 {
-                    purchase(i, currentPosition);
+                    if (players[i].getMoney() > (int)(1.5 * Board.purchaseCost[currentPosition]))    // purchases if player has at least 150% of the money required to buy the property
+                        purchase(i, currentPosition);
+                    else
+                    {
+                        System.out.println("Player " + i + " chooses to send the property " + Board.tileName[currentPosition] + " to auction.");
+                        auction(i, currentPosition, (int)(0.1 * Board.purchaseCost[currentPosition]));       // unowned tile goes to auction, starts at 10% of the cost
+                    }
                 }
                 else if(Board.isProperty[currentPosition] && Board.isOwned[currentPosition] && (i != Board.ownedBy[currentPosition]))
                 // case in which tile is owned -- rent!!
@@ -412,6 +418,95 @@ public class Game
         Board.ownedBy[currentPosition] = i;
         System.out.println("Player " + i + " purchases property " + Board.tileName[currentPosition]);
 
+        colorAdd(i, currentPosition);
+    }
+
+    public void rent(int i, int currentPosition, int diceRoll)
+    {
+        if (currentPosition == 12 || currentPosition == 28)  // exception for a utility tile
+        {
+            if (Board.isOwned[12] && Board.isOwned[28] && (Board.ownedBy[12] == Board.ownedBy[28])) // case if both utilities are owned by same player
+            {
+                players[i].payMoney(10*diceRoll);
+                players[Board.ownedBy[currentPosition]].earnMoney(10*diceRoll);
+                System.out.println("Player " + i + " pays $" + 10*diceRoll + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
+            }
+            else    // case in which player only owns one utility
+            {
+                players[i].payMoney(4*diceRoll);
+                players[Board.ownedBy[currentPosition]].earnMoney(4*diceRoll);
+                System.out.println("Player " + i + " pays $" + 4*diceRoll + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
+            }
+        }
+        else    // any other rentable property
+        {
+            players[i].payMoney(Board.currentRentPrice[currentPosition]);
+            players[Board.ownedBy[currentPosition]].earnMoney(Board.currentRentPrice[currentPosition]);
+            System.out.println("Player " + i + " pays $" + Board.currentRentPrice[currentPosition] + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
+        }
+    }
+
+    public void incomeTax (int i)    // pays income tax for player i
+    {
+        int tenPercent = players[i].getMoney() % 10;
+        if (tenPercent < 200)   // choose lowest option: 10% or $200
+            players[i].payMoney(tenPercent);
+        else
+            players[i].payMoney(200);
+    }
+
+    public void auction (int i, int currentPosition, int currentAuctionPrice)     // currentAuctionPrice represents the price that the auction will start at
+    {
+        // int currentAuctionPrice = 0.1 * purchasePrice;      // auction starts at 10% of base purchase price
+
+        boolean [] willPass = new boolean[numOfPlayers];    // an array that keeps track of whether each player will pass or not
+        int passes = 0;     // counts the number of passes
+
+        for (i = (i+1)%numOfPlayers; true; i = (i+1)%numOfPlayers)
+        {
+            if (passes == numOfPlayers - 1) // if all players but one have passed
+            {
+                break;
+            }
+            else if (passes > numOfPlayers - 1) // should never happen
+            {
+                throw new IllegalStateException("Auctioning Gone Wrong.");
+            }
+            else if (willPass[i])    // continues if the player has decided to pass
+            {
+                continue;
+            }
+            else if (players[i].getMoney() < 1.5 * currentAuctionPrice)  // if the players money is 150% the current auction price, then pass on auctioning
+            {
+                System.out.println("Player " + i + " passes on the property.");
+                willPass[i] = true;
+                passes += 1;
+                continue;
+            }
+            else
+            {
+                currentAuctionPrice += (int)(0.05 * Board.purchaseCost[currentPosition]);     // auction price increases by 5%
+                System.out.println("Player " + i + " bids $" + currentAuctionPrice + " for the property.");
+            }
+        }
+
+        while (true)    // this loop finds the player that auctioned the highest price
+        {
+            if (!willPass[i])
+                break;
+            i = (i+1)%numOfPlayers;
+        }
+
+        System.out.println("Player " + i + " has won the auction for $" + currentAuctionPrice + ". The player now owns " + Board.tileName[currentPosition]);
+        players[i].payMoney(currentAuctionPrice);
+        players[i].purchaseProperty(currentPosition);
+        Board.ownedBy[currentPosition] = i;
+        players[i].earnMoney(Board.purchaseCost[currentPosition]);      // gives back money taken away in purchase property function
+        colorAdd(i, currentPosition);
+    }
+
+    public void colorAdd(int i, int currentPosition)        // adds ownership to property groups
+    {
         for (int j = 0; j < 2; j++) // adds ownership to Purple color group
         {
             if(currentPosition == Improvement.P[j]) // case in which the purchased property is in the selected color group
@@ -568,39 +663,5 @@ public class Game
             players[i].increaseRR();
             players[i].rrRentIncrease();
         }
-    }
-
-    public void rent(int i, int currentPosition, int diceRoll)
-    {
-        if (currentPosition == 12 || currentPosition == 28)  // exception for a utility tile
-        {
-            if (Board.isOwned[12] && Board.isOwned[28] && (Board.ownedBy[12] == Board.ownedBy[28])) // case if both utilities are owned by same player
-            {
-                players[i].payMoney(10*diceRoll);
-                players[Board.ownedBy[currentPosition]].earnMoney(10*diceRoll);
-                System.out.println("Player " + i + " pays $" + 10*diceRoll + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
-            }
-            else    // case in which player only owns one utility
-            {
-                players[i].payMoney(4*diceRoll);
-                players[Board.ownedBy[currentPosition]].earnMoney(4*diceRoll);
-                System.out.println("Player " + i + " pays $" + 4*diceRoll + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
-            }
-        }
-        else    // any other rentable property
-        {
-            players[i].payMoney(Board.currentRentPrice[currentPosition]);
-            players[Board.ownedBy[currentPosition]].earnMoney(Board.currentRentPrice[currentPosition]);
-            System.out.println("Player " + i + " pays $" + Board.currentRentPrice[currentPosition] + " to player " + Board.ownedBy[currentPosition] + " to stay at " + Board.tileName[currentPosition]);
-        }
-    }
-
-    public void incomeTax(int i)    // pays income tax for player i
-    {
-        int tenPercent = players[i].getMoney() % 10;
-        if (tenPercent < 200)   // choose lowest option: 10% or $200
-            players[i].payMoney(tenPercent);
-        else
-            players[i].payMoney(200);
     }
 }

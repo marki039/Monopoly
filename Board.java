@@ -90,7 +90,7 @@ public class Board
         null,   // "Chance",               // 36
         350,    // "Park Place",           // 37
         75,     // "Luxury Tax",           // 38
-        400     // "Boardwalk"              // 39
+        400     // "Boardwalk"             // 39
     };
 
     // Base rent for all properties
