@@ -38,12 +38,18 @@ public class Player
             this.next = next;
         }
 
+        private boolean full () // returns true if the current property has the max number of houses and hotels on it
+        {
+            return (numOfHouses == 4 * group.length) && (numOfHotels == group.length);
+        }
+
         private void increaseHouse(int i) // increases the number of houses on the color group
         {
             if (numOfHouses >= 4*group.length && numOfHotels < group.length)
             {
                 int index = group[numOfHotels];     // index of property that will be improved
                 numOfHotels += 1;
+                totalNumOfHotels += 1;
                 Board.currentRentPrice[index] = Board.baseRent[index][5];       // builds a hotel at the lowest tile number of the group that doesn't currently have a hotel
                 money -= housePrice;
 
@@ -54,6 +60,7 @@ public class Player
                 int houseNumber = numOfHouses / group.length + 1;   // refers to which round of houses is being build: will either be 1, 2, 3, or 4
                 int index = group[numOfHouses % group.length];      // index of property that will be improved
                 numOfHouses += 1;
+                totalNumOfHouses += 1;
                 // System.out.println("\n\n" + group.length + "\n\n" + numOfHouses + "\n\n" + houseNumber);
                 Board.currentRentPrice[index] = Board.baseRent[index][houseNumber];       // builds a house at the lowest tile number of the group that doesn't currently have a house
                 money -= housePrice;
@@ -62,7 +69,37 @@ public class Player
             }
             else
             {
-                System.out.println("Player " + i + " has purchased all the improvements.");
+                // System.out.println("Player " + i + " has purchased all the improvements.");
+            }
+        }
+
+        private void decreaseHouse(int i)   // decreases the number of houses/hotels on the color groups
+        {
+            if(numOfHouses == 0 && numOfHotels == 0)
+            {
+                throw new IllegalStateException("No More Houses To Sell!");
+            }
+            else if (numOfHotels > 0)   // sells hotels first
+            {
+                int index = group[numOfHotels - 1];     // index of property that will be improved
+                numOfHotels -= 1;
+                totalNumOfHotels -= 1;
+                Board.currentRentPrice[index] = Board.baseRent[index][4];       // sells a hotel and returns the rent price to that of a property with 4 houses
+                money += (int)(0.5*housePrice); // refunds 50% of money
+
+                System.out.println("Player " + i + " has sold a hotel on tile " + index + ": " + Board.tileName[index]);
+            }
+            else if (numOfHouses > 0)
+            {
+                int houseNumber = numOfHouses / group.length + 1;   // refers to which round of houses is being sold: will either be 1, 2, 3, or 4
+                int index = group[numOfHouses % group.length];      // index of property that will be sold
+                numOfHouses -= 1;
+                totalNumOfHouses -= 1;
+                // System.out.println("\n\n" + group.length + "\n\n" + numOfHouses + "\n\n" + houseNumber);
+                Board.currentRentPrice[index] = Board.baseRent[index][houseNumber - 1];       // sells a house at the lowest tile number of the group that doesn't currently have a house
+                money += (int)(0.5*housePrice); // refunds 50% of money
+
+                System.out.println("Player " + i + " has sold house number " + houseNumber + " on tile " + index + ": " + Board.tileName[index]);
             }
         }
     }
@@ -78,6 +115,10 @@ public class Player
     private int jailCounter; // counts how many turns the player has been in jail (maximum of 3 turns in jail)
     private int getOutJailFree; // counts number of Get out of Jail Free Cards this player holds.
     private ColorGroupNode colorGroup;      // refers to a list of the color groups this player owns
+    private boolean totallyBankrupt;    // refers to whether the player is out of the game
+    private int totalNumOfHotels;       // refers to the total number of hotels this player owns
+    private int totalNumOfHouses;       // refers to the total number of houses this player owns
+    private int numOfMortgages;     // refers to the number of properties this player has that are mortgaged
 
     Player()
     {
@@ -90,6 +131,10 @@ public class Player
         jailCounter = 0;
         getOutJailFree = 0;
         colorGroup = null;  // starts with no color groups
+        totallyBankrupt = false;
+        totalNumOfHotels = 0;
+        totalNumOfHouses = 0;
+        numOfMortgages = 0;
     }
 
     // function used to purchase property for player
@@ -134,13 +179,33 @@ public class Player
         {
             PropertyNode temp = properties;
             PropertyNode old;
+            /*
+            System.out.println("Player has sold a property. The list of properties left are: ");
+            temp = properties;
+            while (temp != null)
+            {
+                System.out.println(Board.tileName[temp.tileNumber]);
+                temp = temp.next;
+            }
+            */
+            // temp = properties;
 
             // checks first item in list
             if (temp.tileNumber == tileNumber)
             {
+                // System.out.println("Here.");
                 money += sellPrice;
-                temp = temp.next; // removes property from player's property list
-                Board.isOwned[tileNumber] = false;
+                properties = properties.next; // removes property from player's property list
+                // Board.isOwned[tileNumber] = false;
+
+                System.out.println("Player has sold a property. The list of properties left are: ");
+                temp = properties;
+                while (temp != null)
+                {
+                    System.out.println(Board.tileName[temp.tileNumber]);
+                    temp = temp.next;
+                }
+
                 return;
             }
             else
@@ -152,11 +217,21 @@ public class Player
             // checks other items in list
             while(temp != null)
             {
+                // System.out.println("No Here.");
                 if (temp.tileNumber == tileNumber)
                 {
                     money += sellPrice;
                     old.next = temp.next; // removes property from player's property list
-                    Board.isOwned[tileNumber] = false;
+                    // Board.isOwned[tileNumber] = false;
+
+                    System.out.println("Player has sold a property. The list of properties left are: ");
+                    temp = properties;
+                    while (temp != null)
+                    {
+                        System.out.println(Board.tileName[temp.tileNumber]);
+                        temp = temp.next;
+                    }
+
                     return;
                 }
                 old = temp;
@@ -217,13 +292,16 @@ public class Player
     }
 
     public void increaseColor() { colorGroupsOwned += 1; }      // increments colorGroupsOwned
+    public void decreaseColor() { colorGroupsOwned -= 1; }      // decrements colorGroupOwned
     public int returnColor() { return colorGroupsOwned; }       // returns number of color groups player has monopolized
 
     public void increaseRR() { numRR += 1; }        // increments number of railroads owned
+    public void decreaseRR() { numRR -= 1; }
     public int returnRR() { return numRR; }         // returns number of railroads player owns
 
     public void rrRentIncrease()    // changes rent when number of railroads owned is greater than 1
     {
+        System.out.println("Rail Road Rent Increase!!");
         if (numRR > 1)
         {
             PropertyNode temp = properties;
@@ -240,9 +318,58 @@ public class Player
                 else
                 {
                     Board.currentRentPrice[temp.tileNumber] = 25 * (int)Math.pow(2, numRR - 1);     // increases rent price accordingly
+                    System.out.println(Board.tileName[temp.tileNumber] + " " + Board.currentRentPrice[temp.tileNumber]);
+                    temp = temp.next;
                 }
             }
         }
+    }
+
+    public void rrRentDecrease()    // changes rent when the player looses a railroad
+    {
+        PropertyNode temp = properties;
+        System.out.println("Loose RR");
+        if (numRR > 1)
+        {
+            for (int j = 0; j < numRR + 1; j+=1)
+            {
+                while(temp != null && temp.tileNumber % 10 != 5)    // all railroad tiles have a '5' in the one's position
+                {
+                    temp = temp.next;
+                }
+                if (temp == null)
+                {
+                    throw new NullPointerException("temp became null before all railroads were found");
+                }
+                else
+                {
+                    Board.currentRentPrice[temp.tileNumber] = 25 * (int)Math.pow(2, numRR - 1);     // decreases rent price accordingly
+                    System.out.println(Board.tileName[temp.tileNumber] + "'s rent has decreased to: " + Board.currentRentPrice[temp.tileNumber]);
+                    temp = temp.next;
+                }
+            }
+        }
+        else
+        {
+            for (int j = 0; j < numRR + 1; j+=1)
+            {
+                while(temp != null && temp.tileNumber % 10 != 5)    // all railroad tiles have a '5' in the one's position
+                {
+                    temp = temp.next;
+                }
+                if (temp == null)
+                {
+                    throw new NullPointerException("temp became null before all railroads were found");
+                }
+                else
+                {
+                    Board.currentRentPrice[temp.tileNumber] = 25;     // decreases rent price accordingly
+                    System.out.println(Board.tileName[temp.tileNumber] + "'s rent has decreased to: " + Board.currentRentPrice[temp.tileNumber]);
+                    temp = temp.next;
+                }
+            }
+        }
+
     }
 
     public void goToJail() // puts player in jail
@@ -296,16 +423,33 @@ public class Player
     {
         colorGroup = new ColorGroupNode(group, name, housePrice, colorGroup);
     }
+    public void deleteColorGroup(String name)       // deletes a color group from the list of groups this player owns
+    {
+        ColorGroupNode temp = colorGroup;
+        ColorGroupNode old = colorGroup;
+        while (temp != null && !temp.name.equals(name))
+        {
+            old = temp;
+            temp = temp.next;
+        }
+        if (temp == null)
+        {
+            throw new IllegalStateException("Trying to sell a color group that this player does not own.");
+        }
+        else
+        {
+            old = temp.next;        // gets rid of color group from its list
+        }
+    }
 
     public void addHouse(int i) // adds a house on a color group with the least number of improvements
     {
         ColorGroupNode temp = colorGroup;
         ColorGroupNode least = colorGroup;
-        int count = -1;
         // System.out.println("I am before while loop.");
         while (temp != null)        // find the color group with the least number of improvements
         {
-            if (temp.numOfHouses < least.numOfHouses || temp.numOfHotels < least.numOfHotels)
+            if (!temp.full() && (temp.numOfHouses < least.numOfHouses || temp.numOfHotels < least.numOfHotels))
             {
                 least = temp;
             }
@@ -314,5 +458,101 @@ public class Player
         // System.out.println("I am after while loop.");
 
         least.increaseHouse(i);     // increases the improvement on this particular tile
+    }
+
+    public int houses() { return totalNumOfHouses; }
+    public int hotels() { return totalNumOfHotels; }
+
+    public void sellHouse(int i)
+    {
+        ColorGroupNode temp = colorGroup;
+        ColorGroupNode most = colorGroup;
+        // System.out.println("I am before while loop.");
+        while (temp != null)        // find the color group with the most number of improvements
+        {
+            if (temp.numOfHouses > most.numOfHouses || temp.numOfHotels > most.numOfHotels)
+            {
+                most = temp;
+            }
+            temp = temp.next;
+        }
+
+        most.decreaseHouse(i);
+    }
+
+    public void sellHotel(int i)
+    {
+        sellHouse(i);
+    }
+
+    public boolean mortgage(int i)        // returns true if it successfully mortgaged a property
+    {
+        PropertyNode temp = properties;
+        while(temp != null && !Board.mortgaged[temp.tileNumber])     // finds a property that is not yet mortgaged
+        {
+            temp = temp.next;
+        }
+        if (temp == null)
+        {
+            return false;
+        }
+        else
+        {
+            Board.mortgaged[temp.tileNumber] = true; // mortgages property
+            money += (int)(0.5 * Board.purchaseCost[temp.tileNumber]);  // gives back half the money
+            System.out.println("Player " + i + " has morgaged property: " + Board.tileName[temp.tileNumber]);
+            numOfMortgages += 1;
+            return true;
+        }
+    }
+
+    public void deMortgage(int i)     // demortgages a property
+    {
+        PropertyNode temp = properties;
+        while(temp != null && Board.mortgaged[temp.tileNumber])     // finds a property that is mortgaged
+        {
+            temp = temp.next;
+        }
+        if (temp == null)
+        {
+            throw new IllegalStateException("Somehow go to this point.");
+        }
+        else
+        {
+            Board.mortgaged[temp.tileNumber] = false; // mortgages property
+            money -= (int)(1.1 * 0.5 * Board.purchaseCost[temp.tileNumber]);  // pays 10% interest rate on mortgate
+            System.out.println("Player " + i + " has paid off morgaged property: " + Board.tileName[temp.tileNumber]);
+            numOfMortgages -= 1;
+        }
+    }
+
+    public boolean hasMortgaged() { return numOfMortgages > 0; }        // returns true if this player has a mortgaged property
+
+    public int propertyToSell()     // returns the index of a property the player will sell
+    {
+        PropertyNode temp = properties;
+        PropertyNode least = properties;
+        // System.out.println("I am before while loop.");
+        while (temp != null)        // find the color group with the least number of improvements
+        {
+            if (temp.tileNumber < least.tileNumber)
+            {
+                least = temp;
+            }
+            temp = temp.next;
+        }
+
+        return least.tileNumber;
+    }
+
+    public boolean hasProperty() { return properties != null; } // returns true if the player has properties
+
+    public void totallyBankrupt() { totallyBankrupt = true; }
+    public boolean isTotallyBankrupt() { return totallyBankrupt; }
+
+    public void payForHousesAndHotels (int house, int hotel)
+    {
+        money -= totalNumOfHouses*house;
+        money -= totalNumOfHotels*hotel;
     }
 }
